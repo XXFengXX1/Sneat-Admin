@@ -4,7 +4,6 @@
 }
 
 .app{
-  background-color: #eeeff4;
   width: 100vw;
   height: 100vh;
 }
@@ -12,4 +11,18 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+}
+.bac{
+  background-color: #eeeff4;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  
+}
+p{
+  margin: 0px;
+}
+h4{
+  margin: 0px;
 }

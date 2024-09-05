@@ -22,11 +22,601 @@
 .mainContentWrapper .chartWrapper .chart {
   box-shadow: 0px 2px 10px rgba(50, 71, 92, 0.1);
   border-radius: 8px;
-  height: 164px;
+  height: 180px;
 }
 .mainContentWrapper .chartWrapper .xl {
   width: 66%;
 }
 .mainContentWrapper .chartWrapper .s {
   width: 15%;
+}
+.userContent {
+  z-index: 2;
+  position: relative;
+}
+.app .Analytics .RevenuechartWrapper {
+  height: 364px;
+}
+.Analytics {
+  height: auto !important;
+}
+.Analytics .congradulation {
+  height: 180px;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.Analytics .congradulation h4 {
+  height: 25px;
+  font-weight: 550;
+}
+.Analytics .contentWrapper {
+  justify-content: space-between;
+  position: relative;
+}
+.Analytics .contentWrapper img {
+  width: 220px;
+  height: 150px;
+  margin-right: 30px;
+}
+.Analytics .contentWrapper .conButton {
+  height: 32px;
+  font-size: 14px;
+  width: 115px;
+  outline-width: 2px;
+  background-color: rgba(255, 255, 255, 0);
+  line-height: 0px;
+  border: 1px solid #696cff;
+  border-radius: 4px;
+  position: relative;
+  margin-left: 12px;
+}
+.Analytics .orderWrapper {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  position: absolute;
+  top: 25px;
+  display: flex;
+  left: 0px;
+}
+.Analytics .sales {
+  justify-content: left;
+  margin-right: 0px;
+  margin-left: 0px;
+  box-sizing: border-box;
+}
+.Analytics .sales .changingText {
+  padding: 0px;
+  width: auto;
+  color: #71dd37;
+}
+.Analytics .sales h6 {
+  margin: 0px;
+}
+.Analytics .sales h6 h4 {
+  margin-top: 6px;
+}
+.Analytics .sales svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  color: #71dd37;
+}
+.Analytics .sales img {
+  margin-bottom: 8px;
+}
+.Analytics .totalRevenue {
+  height: 364px !important;
+  box-sizing: border-box;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.Analytics .totalRevenue .leftWrapper {
+  border-right: 0.5px solid #e6e6e6;
+}
+.Analytics .totalRevenue .ChartBlock {
+  position: relative;
+  align-items: center;
+  top: -40px;
+}
+.Analytics .totalRevenue .ChartBlock .Percent {
+  position: absolute;
+  top: 80px;
+  font-size: 20px;
+  padding-left: 0px;
+  margin-right: 5px;
+}
+.Analytics .totalRevenue .ChartBlock .growth {
+  position: absolute;
+  top: 114px;
+  padding-left: 0px;
+  margin-right: 5px;
+}
+.Analytics .totalRevenue .ChartBlock canvas {
+  position: relative !important;
+  margin: 0 auto !important;
+  top: -10px !important;
+}
+.Analytics .totalRevenue .companyGrowth {
+  position: absolute;
+  top: 220px;
+}
+.Analytics .totalRevenue .iconGroup {
+  position: relative;
+  top: -30px;
+  justify-content: center;
+  padding: 0px;
+}
+.Analytics .totalRevenue .iconGroup svg {
+  margin-right: 6px;
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+.Analytics .totalRevenue .iconGroup .group {
+  width: 118px;
+  padding: 0px;
+}
+.Analytics .totalRevenue .iconGroup .textWrapper {
+  display: inline-block;
+}
+.Analytics .totalRevenue .iconGroup .years {
+  font-size: 14px;
+  text-align: left;
+}
+.Analytics .totalRevenue .iconGroup .money {
+  font-size: 16px;
+}
+.Analytics .RevenuechartWrapper .threeChartsWrapper {
+  width: 32%;
+  justify-content: space-between;
+  padding: 0px;
+  margin: 0px;
+}
+.Analytics .RevenuechartWrapper .threeChartsWrapper .payments {
+  width: 47%;
+  box-sizing: border-box;
+}
+.Analytics .RevenuechartWrapper .threeChartsWrapper .revenue {
+  width: 47%;
+  box-sizing: border-box;
+}
+.Analytics .RevenuechartWrapper .threeChartsWrapper .profitReport {
+  margin-top: 22px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 160px;
+  margin-left: 0px;
+  justify-content: space-between;
+  position: relative;
+}
+.Analytics .RevenuechartWrapper .threeChartsWrapper .profitReport .textWrapper {
+  width: 121px;
+  padding: 0px;
+}
+.Analytics .RevenuechartWrapper .threeChartsWrapper .profitReport .year {
+  background-color: rgba(255, 171, 0, 0.2);
+  font-size: 12px;
+  width: 80px;
+  text-align: center;
+  padding: 1px 2px;
+  margin-top: 10px;
+}
+.Analytics .RevenuechartWrapper .threeChartsWrapper .profitReport .changingText {
+  padding: 0px;
+  width: auto;
+  color: #71dd37;
+  text-align: left;
+}
+.Analytics .RevenuechartWrapper .threeChartsWrapper .profitReport svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  color: #71dd37;
+}
+.Analytics .RevenuechartWrapper .threeChartsWrapper .profitReport .lineChart {
+  padding: 0px;
+  height: 160px;
+  overflow: hidden;
+}
+.Analytics .RevenuechartWrapper .threeChartsWrapper .profitReport .lineChart canvas {
+  height: 300px !important;
+  position: relative !important;
+  top: -80px !important;
+}
+.Analytics .RevenuechartWrapper .threeChartsWrapper h5 {
+  margin-bottom: 6px;
+}
+.Analytics .RevenuechartWrapper .threeChartsWrapper h4 {
+  text-align: left;
+  margin-top: 4px;
+}
+.Analytics .statisticWrapper {
+  height: 1040px;
+  max-width: 1400px;
+  padding: 20px;
+  box-sizing: border-box;
+  width: calc(96vw - 240px);
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 0px;
+  gap: 10px;
+}
+.Analytics .statisticWrapper .chart {
+  box-shadow: 0px 2px 10px rgba(50, 71, 92, 0.1);
+  border-radius: 8px;
+  height: 500px;
+}
+.Analytics .statisticWrapper .statisticM {
+  width: 32%;
+}
+.Analytics .statisticWrapper .statisticL {
+  width: 49%;
+}
+.Analytics .statisticWrapper .OrderStatistics .header {
+  margin-bottom: 8px;
+}
+.Analytics .statisticWrapper .OrderStatistics .subHeader {
+  margin-bottom: 20px;
+}
+.Analytics .statisticWrapper .OrderStatistics .totalOrder {
+  width: 108%;
+  position: relative;
+}
+.Analytics .statisticWrapper .OrderStatistics .chartWeekly {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -50px;
+  right: -30px;
+}
+.Analytics .statisticWrapper .OrderStatistics .chartWeekly .textContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin-left: 6px;
+  margin-top: 8px;
+}
+.Analytics .statisticWrapper .OrderStatistics .categoryList {
+  align-items: center;
+  list-style: none;
+  position: relative;
+  top: -80px;
+}
+.Analytics .statisticWrapper .OrderStatistics .categoryList li {
+  align-items: center;
+  margin-bottom: 20px;
+}
+.Analytics .statisticWrapper .OrderStatistics .categoryList .leftWrapper {
+  display: flex;
+  align-items: center;
+}
+.Analytics .statisticWrapper .OrderStatistics .categoryList .textWrapper {
+  width: 140px;
+  padding: 0px;
+  display: inline-block;
+}
+.Analytics .statisticWrapper .OrderStatistics .categoryList .textWrapper .header {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.Analytics .statisticWrapper .OrderStatistics .categoryList .textWrapper p {
+  font-size: 14px;
+  padding: 0px;
+  text-align: left;
+}
+.Analytics .statisticWrapper .OrderStatistics .categoryList .number {
+  font-size: 16px;
+  line-height: 50px;
+}
+.Analytics .statisticWrapper .OrderStatistics .categoryList svg {
+  width: 38px;
+  height: 38px;
+  border-radius: 4px;
+  padding: 8px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: 10px;
+}
+.Analytics .statisticWrapper .TotalIncome {
+  overflow: hidden;
+  position: relative;
+}
+.Analytics .statisticWrapper .TotalIncome .topWrapper .leftWrapper svg {
+  width: 50px;
+  height: 50px;
+  padding: 12px;
+  box-sizing: border-box;
+  display: inline-block;
+  border-radius: 6px;
+}
+.Analytics .statisticWrapper .TotalIncome .topWrapper .rightText .header {
+  font-size: 16px ;
+}
+.Analytics .statisticWrapper .TotalIncome .topWrapper .rightText .changingText {
+  font-size: 14px;
+  color: #8fdf82;
+  margin-left: 6px;
+  font-weight: 0;
+}
+.Analytics .statisticWrapper .TotalIncome .topWrapper .rightText .changingText svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+.Analytics .statisticWrapper .TotalIncome .bottomWrapper {
+  position: relative;
+}
+.Analytics .statisticWrapper .TotalIncome .bottomWrapper .chartGroup {
+  position: relative;
+  left: -100px;
+}
+.Analytics .statisticWrapper .TotalIncome .bottomWrapper .textWrapper {
+  position: relative;
+  top: -80px;
+  text-align: left;
+  left: 40%;
+}
+.Analytics .statisticWrapper .TotalIncome .bottomWrapper canvas {
+  position: absolute !important;
+  left: 0 !important;
+}
+.Analytics .statisticWrapper .TotalIncome canvas {
+  position: relative !important;
+  left: -18% !important;
+}
+.Analytics .statisticWrapper .Transactions {
+  position: relative;
+}
+.Analytics .statisticWrapper .Transactions .categoryList {
+  top: 20px;
+  padding: 0px;
+  align-items: center;
+  list-style: none;
+  position: relative;
+}
+.Analytics .statisticWrapper .Transactions .categoryList li {
+  align-items: center;
+  margin-bottom: 20px;
+}
+.Analytics .statisticWrapper .Transactions .categoryList .leftWrapper {
+  display: flex;
+  align-items: center;
+}
+.Analytics .statisticWrapper .Transactions .categoryList .textWrapper {
+  width: auto;
+  padding: 0px;
+  display: inline-block;
+}
+.Analytics .statisticWrapper .Transactions .categoryList .textWrapper .header {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.Analytics .statisticWrapper .Transactions .categoryList .textWrapper p {
+  font-size: 16px;
+  padding: 0px;
+  text-align: left;
+  font-weight: 550;
+}
+.Analytics .statisticWrapper .Transactions .categoryList .number {
+  font-size: 14px;
+  line-height: 50px;
+  padding-left: 0px;
+}
+.Analytics .statisticWrapper .Transactions .categoryList img {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  padding: 8px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: 10px;
+}
+.Analytics .statisticWrapper .ActivityTimeLine {
+  position: relative;
+}
+.Analytics .statisticWrapper .ActivityTimeLine .line {
+  width: 4px;
+  height: 266px;
+  position: absolute;
+  top: 107px;
+  left: 28px;
+}
+.Analytics .statisticWrapper .ActivityTimeLine .ActivityWrapper {
+  margin-top: 60px;
+  padding-left: 30px;
+}
+.Analytics .statisticWrapper .ActivityTimeLine .activity {
+  margin-top: 50px;
+  position: relative;
+}
+.Analytics .statisticWrapper .ActivityTimeLine .activity .dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  padding: 0px;
+  left: -14px;
+  top: 6px;
+}
+.Analytics .statisticWrapper .ActivityTimeLine .activity .content {
+  font-size: 14px;
+}
+.Analytics .statisticWrapper .ActivityTimeLine .leftWrapper {
+  text-align: start;
+}
+.Analytics .statisticWrapper .ActivityTimeLine .activityThing {
+  margin-top: 16px;
+}
+.Analytics .statisticWrapper .ActivityTimeLine .activityThing .textGroup {
+  padding: 0px;
+}
+.Analytics .statisticWrapper .ActivityTimeLine .activityThing .smallAvatar {
+  width: 34px;
+  height: 34px;
+  margin-left: 0px;
+  border: 3px solid #fff;
+}
+.Analytics .statisticWrapper .ActivityTimeLine img {
+  width: 34px;
+  height: 34px;
+  margin-right: 8px;
+  padding: 0px;
+}
+.Analytics .statisticWrapper .ActivityTimeLine .pdf {
+  width: 24px;
+  height: 24px;
+}
+.Analytics .statisticWrapper .ActivityTimeLine .avatar {
+  border-radius: 50%;
+  margin-left: 12px;
+}
+.Analytics .statisticWrapper .BrowerETC .dataWrapper .annotate {
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 40px;
+}
+.Analytics .statisticWrapper .BrowerETC .dataWrapper .annotateText {
+  font-size: 14px;
+  padding: 0px;
+  position: relative;
+  text-align: left;
+}
+.Analytics .statisticWrapper .BrowerETC .dataWrapper ul {
+  padding: 0px;
+}
+.Analytics .statisticWrapper .BrowerETC .dataWrapper ul li {
+  margin-top: 34px;
+}
+.Analytics .statisticWrapper .BrowerETC .dataWrapper ul li img {
+  width: 20px;
+  height: 20px;
+  padding: 0px;
+}
+.Analytics .statisticWrapper .BrowerETC .dataWrapper ul li .numbers {
+  font-size: 16px;
+}
+.Analytics .statisticWrapper .BrowerETC .dataWrapper ul li .name {
+  font-size: 16px;
+  width: 84px;
+  padding-right: 0px;
+  text-align: left;
+}
+.Analytics .statisticWrapper .BrowerETC .dataWrapper ul li .visits {
+  font-size: 16px;
+  font-weight: 550;
+  padding: 0px;
+  margin-right: 14px;
+  width: 40px;
+}
+.Analytics .statisticWrapper .BrowerETC .dataWrapper ul li .dataInPercentage {
+  padding: 0px;
+}
+.Analytics .statisticWrapper .BrowerETC .dataWrapper ul li .processBar {
+  width: 50%;
+  overflow: hidden;
+  background-color: #ececec;
+  border-radius: 10px;
+  height: 10px;
+  position: relative;
+}
+.Analytics .statisticWrapper .BrowerETC .dataWrapper ul li .processBar .process {
+  border-radius: 10px;
+  height: 10px;
+  position: relative;
+  left: -14px;
+}
+.Analytics .statisticWrapper .BrowerETC .dataWrapper ul li .percentage {
+  padding: 0px;
+  display: inline-block;
+  margin-left: 10px;
+  width: 56px;
+}
+.payments {
+  justify-content: left;
+  margin-right: 0px;
+  margin-left: 0px;
+  box-sizing: border-box;
+}
+.payments .changingText {
+  padding: 0px;
+  width: auto;
+  color: #ff3e1d;
+}
+.payments h6 {
+  margin: 0px;
+}
+.payments h6 h4 {
+  margin-top: 6px;
+}
+.payments svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  color: #ff3e1d;
+}
+.payments img {
+  margin-bottom: 8px;
+}
+.chart {
+  box-sizing: border-box;
+  padding: 20px;
+  position: relative;
+}
+.PiechartRevenue div {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+}
+@media screen and (max-width: 1200px) {
+  .xl {
+    width: 100% !important;
+  }
+  .s {
+    width: 49% !important;
+  }
+  .chartWrapper {
+    height: 390px !important;
+  }
+  .threeChartsWrapper {
+    width: 100% !important;
+  }
+  .threeChartsWrapper .s {
+    width: 23% !important ;
+  }
+  .threeChartsWrapper .m {
+    width: 48% !important;
+    height: 180px !important;
+    margin-top: 0px !important;
+    margin-right: 0px;
+  }
+  .threeChartsWrapper .Analytics .totalRevenChartBlock {
+    height: 600px !important;
+  }
+  .threeChartsWrapper .statisticWrapper {
+    width: calc(96vw - 100px) !important;
+    height: 2140px !important;
+  }
+  .threeChartsWrapper .statisticWrapper .totalOrder {
+    padding-right: 14px;
+  }
+  .threeChartsWrapper .statisticWrapper .statisticL {
+    width: 100% !important;
+  }
+  .threeChartsWrapper .statisticWrapper .statisticM {
+    width: 48% !important;
+  }
+  .threeChartsWrapper .statisticWrapper .OrderStatistics {
+    width: 49% !important;
+  }
+  .threeChartsWrapper .statisticWrapper .statisticL-1200 {
+    width: 100% !important;
+  }
 }

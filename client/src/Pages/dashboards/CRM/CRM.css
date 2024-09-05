@@ -1,0 +1,878 @@
+.mainContentWrapper {
+  margin-top: 20px;
+  box-sizing: border-box;
+  padding: 0px;
+  height: auto;
+  gap: 20px;
+  z-index: 10000;
+  margin-left: 275px;
+  width: calc(96% - 240px);
+}
+.mainContentWrapper .chartWrapper {
+  height: 180px;
+  max-width: 1400px;
+  padding: 20px;
+  box-sizing: border-box;
+  width: calc(96vw - 240px);
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 0px;
+  gap: 10px;
+}
+.mainContentWrapper .chartWrapper .chart {
+  box-shadow: 0px 2px 10px rgba(50, 71, 92, 0.1);
+  border-radius: 8px;
+  height: 180px;
+}
+.mainContentWrapper .chartWrapper .xl {
+  width: 66%;
+}
+.mainContentWrapper .chartWrapper .s {
+  width: 15%;
+}
+.mainContentWrapper .chartWrapper .m {
+  width: 32%;
+}
+.mainContentWrapper .TopPart {
+  height: 364px;
+}
+.userContent {
+  z-index: 2;
+  position: relative;
+}
+.CRM {
+  height: auto !important;
+}
+.CRM .contentWrapper {
+  justify-content: space-between;
+  position: relative;
+}
+.CRM .contentWrapper img {
+  width: 220px;
+  height: 150px;
+  margin-right: 30px;
+}
+.CRM .contentWrapper .conButton {
+  height: 32px;
+  font-size: 14px;
+  width: 115px;
+  outline-width: 2px;
+  background-color: rgba(255, 255, 255, 0);
+  line-height: 0px;
+  border: 1px solid #696cff;
+  border-radius: 4px;
+  position: relative;
+  margin-left: 12px;
+}
+.CRM .Overview {
+  height: 364px !important;
+}
+.CRM .customerRatings {
+  height: 364px !important;
+  box-sizing: border-box;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.CRM .customerRatings .leftWrapper {
+  border-right: 0.5px solid #e6e6e6;
+}
+.CRM .customerRatings .points {
+  margin-left: 0px;
+}
+.CRM .customerRatings .points .pointDifference {
+  background-color: rgba(105, 108, 255, 0.1);
+  color: #696cff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.CRM .customerRatings .ChartBlock {
+  position: relative;
+  align-items: center;
+  top: -40px;
+}
+.CRM .customerRatings .ChartBlock .Percent {
+  position: absolute;
+  top: 80px;
+  font-size: 20px;
+  padding-left: 0px;
+  margin-right: 5px;
+}
+.CRM .customerRatings .ChartBlock .growth {
+  position: absolute;
+  top: 114px;
+  padding-left: 0px;
+  margin-right: 5px;
+}
+.CRM .customerRatings .ChartBlock canvas {
+  position: relative !important;
+  margin: 0 auto !important;
+  top: -10px !important;
+}
+.CRM .customerRatings .companyGrowth {
+  position: absolute;
+  top: 220px;
+}
+.CRM .customerRatings .iconGroup {
+  position: relative;
+  top: -30px;
+  justify-content: center;
+  padding: 0px;
+}
+.CRM .customerRatings .iconGroup svg {
+  margin-right: 6px;
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+.CRM .customerRatings .iconGroup .group {
+  width: 118px;
+  padding: 0px;
+}
+.CRM .customerRatings .iconGroup .textWrapper {
+  display: inline-block;
+}
+.CRM .customerRatings .iconGroup .years {
+  font-size: 14px;
+  text-align: left;
+}
+.CRM .customerRatings .iconGroup .money {
+  font-size: 16px;
+}
+.CRM .threeChartsWrapper {
+  width: 32%;
+  justify-content: space-between;
+  padding: 0px;
+  margin: 0px;
+}
+.CRM .threeChartsWrapper .sessions {
+  width: 47%;
+  box-sizing: border-box;
+}
+.CRM .threeChartsWrapper .sessions .CRMStraiLineWrapper {
+  width: 200%;
+}
+.CRM .threeChartsWrapper .order {
+  width: 47%;
+  margin-right: 0px;
+  box-sizing: border-box;
+}
+.CRM .threeChartsWrapper .order {
+  justify-content: left;
+  margin-right: 0px;
+  margin-left: 0px;
+  box-sizing: border-box;
+}
+.CRM .threeChartsWrapper .order .changingText {
+  padding: 0px;
+  width: auto;
+  color: #71dd37;
+}
+.CRM .threeChartsWrapper .order h6 {
+  margin: 0px;
+}
+.CRM .threeChartsWrapper .order h6 h4 {
+  margin-top: 6px;
+}
+.CRM .threeChartsWrapper .order svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  color: #71dd37;
+}
+.CRM .threeChartsWrapper .order img {
+  margin-bottom: 8px;
+}
+.CRM .threeChartsWrapper .profitReport {
+  margin-top: 22px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 160px;
+  margin-left: 0px;
+  justify-content: space-between;
+  position: relative;
+}
+.CRM .threeChartsWrapper .profitReport .textWrapper {
+  width: 121px;
+  padding: 0px;
+}
+.CRM .threeChartsWrapper .profitReport .year {
+  font-size: 14px;
+  width: 100px;
+  margin-top: 10px;
+}
+.CRM .threeChartsWrapper .profitReport .changingText {
+  padding: 0px;
+  width: auto;
+  color: #71dd37;
+  text-align: left;
+}
+.CRM .threeChartsWrapper .profitReport svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  color: #71dd37;
+}
+.CRM .threeChartsWrapper .profitReport .text {
+  position: absolute;
+  text-align: center;
+  top: 65px;
+}
+.CRM .threeChartsWrapper .profitReport .lineChart {
+  width: 180px;
+  padding: 0px;
+  height: 160px;
+  overflow: hidden;
+}
+.CRM .threeChartsWrapper .profitReport .lineChart canvas {
+  position: relative !important;
+  top: -130px !important;
+}
+.CRM .threeChartsWrapper h5 {
+  margin-bottom: 6px;
+}
+.CRM .threeChartsWrapper h4 {
+  text-align: left;
+  margin-top: 4px;
+}
+.CRM .statisticWrapper {
+  height: 1426px;
+  max-width: 1400px;
+  padding: 20px;
+  box-sizing: border-box;
+  width: calc(96vw - 240px);
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 0px;
+  gap: 10px;
+}
+.CRM .statisticWrapper .chart {
+  box-shadow: 0px 2px 10px rgba(50, 71, 92, 0.1);
+  border-radius: 8px;
+  height: 450px;
+}
+.CRM .statisticWrapper .statisticM {
+  width: 32%;
+}
+.CRM .statisticWrapper .statisticL {
+  width: 49%;
+}
+.CRM .statisticWrapper .statisticXL {
+  width: 66%;
+}
+.CRM .statisticWrapper .OrderStatistics .header {
+  margin-bottom: 8px;
+}
+.CRM .statisticWrapper .OrderStatistics .subHeader {
+  margin-bottom: 20px;
+}
+.CRM .statisticWrapper .OrderStatistics .totalOrder {
+  width: 108%;
+  position: relative;
+}
+.CRM .statisticWrapper .OrderStatistics .chartWeekly {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -50px;
+  right: -30px;
+}
+.CRM .statisticWrapper .OrderStatistics .chartWeekly .textContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin-left: 6px;
+  margin-top: 8px;
+}
+.CRM .statisticWrapper .OrderStatistics .categoryList {
+  align-items: center;
+  list-style: none;
+  position: relative;
+  top: -60px;
+}
+.CRM .statisticWrapper .OrderStatistics .categoryList li {
+  align-items: center;
+  margin-bottom: 20px;
+}
+.CRM .statisticWrapper .OrderStatistics .categoryList .leftWrapper {
+  display: flex;
+  align-items: center;
+}
+.CRM .statisticWrapper .OrderStatistics .categoryList .textWrapper {
+  width: 140px;
+  padding: 0px;
+  display: inline-block;
+}
+.CRM .statisticWrapper .OrderStatistics .categoryList .textWrapper .header {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.CRM .statisticWrapper .OrderStatistics .categoryList .textWrapper p {
+  font-size: 14px;
+  padding: 0px;
+  text-align: left;
+}
+.CRM .statisticWrapper .OrderStatistics .categoryList .number {
+  font-size: 16px;
+  line-height: 50px;
+}
+.CRM .statisticWrapper .OrderStatistics .categoryList svg {
+  width: 38px;
+  height: 38px;
+  border-radius: 4px;
+  padding: 8px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: 10px;
+}
+.CRM .statisticWrapper .TotalIncome {
+  overflow: hidden;
+  position: relative;
+}
+.CRM .statisticWrapper .TotalIncome .topWrapper .leftWrapper svg {
+  width: 50px;
+  height: 50px;
+  padding: 12px;
+  box-sizing: border-box;
+  display: inline-block;
+  border-radius: 6px;
+}
+.CRM .statisticWrapper .TotalIncome .topWrapper .rightText .header {
+  font-size: 16px ;
+}
+.CRM .statisticWrapper .TotalIncome .topWrapper .rightText .changingText {
+  font-size: 14px;
+  color: #8fdf82;
+  margin-left: 6px;
+  font-weight: 0;
+}
+.CRM .statisticWrapper .TotalIncome .topWrapper .rightText .changingText svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+.CRM .statisticWrapper .TotalIncome .bottomWrapper {
+  position: relative;
+}
+.CRM .statisticWrapper .TotalIncome .bottomWrapper .chartGroup {
+  position: relative;
+  left: -100px;
+}
+.CRM .statisticWrapper .TotalIncome .bottomWrapper .textWrapper {
+  position: relative;
+  top: -80px;
+  text-align: left;
+  left: 40%;
+}
+.CRM .statisticWrapper .TotalIncome .bottomWrapper canvas {
+  position: absolute !important;
+  left: 0 !important;
+}
+.CRM .statisticWrapper .TotalIncome canvas {
+  position: relative !important;
+  left: -18% !important;
+}
+.CRM .statisticWrapper .EarningReport {
+  position: relative;
+}
+.CRM .statisticWrapper .EarningReport .categoryList {
+  top: 20px;
+  padding: 0px;
+  align-items: center;
+  list-style: none;
+  position: relative;
+}
+.CRM .statisticWrapper .EarningReport .categoryList li {
+  align-items: center;
+  margin-bottom: 20px;
+}
+.CRM .statisticWrapper .EarningReport .categoryList li svg {
+  padding: 6px;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.CRM .statisticWrapper .EarningReport .categoryList .leftWrapper {
+  display: flex;
+  align-items: center;
+}
+.CRM .statisticWrapper .EarningReport .categoryList .textWrapper {
+  width: auto;
+  padding: 0px;
+  display: inline-block;
+}
+.CRM .statisticWrapper .EarningReport .categoryList .textWrapper .header {
+  font-size: 16px;
+  margin-bottom: 0px !important;
+}
+.CRM .statisticWrapper .EarningReport .categoryList .textWrapper p {
+  font-size: 14px;
+  padding: 0px;
+  text-align: left;
+  font-weight: 550;
+}
+.CRM .statisticWrapper .EarningReport .categoryList .number {
+  font-size: 14px;
+  line-height: 50px;
+  padding-left: 0px;
+}
+.CRM .statisticWrapper .EarningReport .categoryList img {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  padding: 8px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: 10px;
+}
+.CRM .statisticWrapper .TopProducts {
+  position: relative;
+  justify-content: space-between;
+  margin-left: 0px;
+}
+.CRM .statisticWrapper .TopProducts .purple {
+  color: #696cff;
+  display: inline-block;
+}
+.CRM .statisticWrapper .TopProducts h5 {
+  font-weight: 550;
+}
+.CRM .statisticWrapper .TopProducts .categoryList {
+  padding: 0px;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  width: 48%;
+}
+.CRM .statisticWrapper .TopProducts .categoryList li {
+  align-items: center;
+  margin-bottom: 20px;
+}
+.CRM .statisticWrapper .TopProducts .categoryList .leftWrapper {
+  display: flex;
+  align-items: center;
+}
+.CRM .statisticWrapper .TopProducts .categoryList .textWrapper {
+  width: auto;
+  padding: 0px;
+  display: inline-block;
+}
+.CRM .statisticWrapper .TopProducts .categoryList .textWrapper .header {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.CRM .statisticWrapper .TopProducts .categoryList .textWrapper p {
+  font-size: 16px;
+  padding: 0px;
+  text-align: left;
+  font-weight: 550;
+}
+.CRM .statisticWrapper .TopProducts .categoryList .number {
+  font-size: 14px;
+  line-height: 50px;
+  padding-left: 0px;
+}
+.CRM .statisticWrapper .TopProducts .categoryList img {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  padding: 8px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: 10px;
+}
+.CRM .statisticWrapper .salesAnalytics {
+  overflow: hidden;
+}
+.CRM .statisticWrapper .salesAnalytics .difference {
+  align-items: center;
+}
+.CRM .statisticWrapper .salesAnalytics .difference h6 {
+  margin: 0px;
+}
+.CRM .statisticWrapper .salesAnalytics .mapWrapper {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  top: 20px;
+}
+.CRM .statisticWrapper .salesbyCountries .categoryList {
+  padding: 0px;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+.CRM .statisticWrapper .salesbyCountries .categoryList li {
+  align-items: center;
+  margin-bottom: 12px;
+}
+.CRM .statisticWrapper .salesbyCountries .categoryList li .changingText {
+  margin-left: 10px;
+  padding: 0px;
+  width: auto;
+  color: #71dd37;
+}
+.CRM .statisticWrapper .salesbyCountries .categoryList li .changingText svg {
+  width: 18px;
+  height: 18px;
+}
+.CRM .statisticWrapper .salesbyCountries .categoryList li .Down {
+  color: #ff3e1d;
+}
+.CRM .statisticWrapper .salesbyCountries .categoryList .leftWrapper {
+  display: flex;
+  align-items: center;
+}
+.CRM .statisticWrapper .salesbyCountries .categoryList .textWrapper {
+  width: auto;
+  padding: 0px;
+  display: inline-block;
+}
+.CRM .statisticWrapper .salesbyCountries .categoryList .textWrapper .header {
+  font-size: 16px;
+  margin-bottom: 4px;
+  font-weight: 550;
+}
+.CRM .statisticWrapper .salesbyCountries .categoryList .textWrapper p {
+  font-size: 14px;
+  padding: 0px;
+  text-align: left;
+  font-weight: 550;
+}
+.CRM .statisticWrapper .salesbyCountries .categoryList .number {
+  font-size: 14px;
+  line-height: 50px;
+  padding-left: 0px;
+  font-weight: 550;
+}
+.CRM .statisticWrapper .salesbyCountries .categoryList img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 8px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: 10px;
+}
+.CRM .statisticWrapper .SalesStates svg {
+  color: #71dd37;
+  height: 40px;
+  width: 40px;
+  margin-bottom: 10px;
+}
+.CRM .statisticWrapper .SalesStates .wrapper {
+  top: -20px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.CRM .statisticWrapper .SalesStates .wrapper .percent {
+  position: absolute;
+}
+.CRM .statisticWrapper .SalesStates .textWrapper {
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  top: -60px;
+}
+.CRM .statisticWrapper .SalesStates .textWrapper svg {
+  width: 16px;
+  height: 16px;
+  margin: 0px;
+  margin-right: 10px;
+}
+.CRM .statisticWrapper .SalesStates .textWrapper .conversation svg {
+  color: #71dd37;
+}
+.CRM .statisticWrapper .SalesStates .textWrapper .requirements svg {
+  color: rgba(100, 100, 100, 0.3);
+  width: 16px;
+}
+.CRM .statisticWrapper .SalesStates .textWrapper .text {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.CRM .statisticWrapper .TeamMembers {
+  width: 49%;
+}
+.CRM .statisticWrapper .TeamMembers .dataWrapper .annotate {
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 10px;
+}
+.CRM .statisticWrapper .TeamMembers .dataWrapper .annotateText {
+  font-size: 14px;
+  padding: 0px;
+  position: relative;
+  text-align: left;
+}
+.CRM .statisticWrapper .TeamMembers .dataWrapper ul {
+  padding: 0px;
+}
+.CRM .statisticWrapper .TeamMembers .dataWrapper ul li {
+  margin-top: 18px;
+}
+.CRM .statisticWrapper .TeamMembers .dataWrapper ul li .subtitles {
+  font-size: 14px;
+  width: auto;
+}
+.CRM .statisticWrapper .TeamMembers .dataWrapper ul li .imgAndName {
+  padding-left: 24px;
+  padding-right: 0px;
+}
+.CRM .statisticWrapper .TeamMembers .dataWrapper ul li .imgAndName .name {
+  font-weight: 550;
+}
+.CRM .statisticWrapper .TeamMembers .dataWrapper ul li .projects {
+  font-size: 12px;
+  border-radius: 6px;
+  padding: 4px 8px;
+  position: relative;
+  left: -20px;
+}
+.CRM .statisticWrapper .TeamMembers .dataWrapper ul li img {
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+  border-radius: 50%;
+}
+.CRM .statisticWrapper .TeamMembers .dataWrapper ul li .numbers {
+  font-size: 16px;
+}
+.CRM .statisticWrapper .TeamMembers .dataWrapper ul li .name {
+  font-size: 16px;
+  width: 84px;
+  padding-right: 0px;
+  text-align: left;
+}
+.CRM .statisticWrapper .TeamMembers .dataWrapper ul li .tasks {
+  font-size: 16px;
+  font-weight: 550;
+  padding: 0px;
+  width: 40px;
+  position: relative;
+  left: -18px;
+}
+.CRM .statisticWrapper .TeamMembers .dataWrapper ul li .dataInPercentage {
+  padding: 0px;
+}
+.CRM .statisticWrapper .TeamMembers .dataWrapper ul li .dataInPercentage canvas {
+  position: absolute !important;
+  left: -10px !important;
+}
+.CRM .statisticWrapper .Customers {
+  width: 49%;
+}
+.CRM .statisticWrapper .Customers .dataWrapper .annotate {
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  padding-top: 0px;
+}
+.CRM .statisticWrapper .Customers .dataWrapper .annotateText {
+  font-size: 14px;
+  padding: 0px;
+  position: relative;
+  text-align: left;
+}
+.CRM .statisticWrapper .Customers .dataWrapper ul {
+  padding: 0px;
+}
+.CRM .statisticWrapper .Customers .dataWrapper ul li {
+  position: relative;
+  border-top: 0.5px solid rgba(100, 100, 100, 0.2);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.CRM .statisticWrapper .Customers .dataWrapper ul li .subtitles {
+  font-size: 14px;
+  width: auto;
+}
+.CRM .statisticWrapper .Customers .dataWrapper ul li .imgAndName {
+  padding-left: 24px;
+  padding-right: 0px;
+  width: 210px;
+}
+.CRM .statisticWrapper .Customers .dataWrapper ul li .imgAndName .name {
+  font-weight: 550;
+}
+.CRM .statisticWrapper .Customers .dataWrapper ul li .amount {
+  font-weight: 600;
+  text-align: left;
+  padding: 0px;
+}
+.CRM .statisticWrapper .Customers .dataWrapper ul li .projectsWrapper {
+  padding: 0px;
+}
+.CRM .statisticWrapper .Customers .dataWrapper ul li .projects {
+  font-size: 12px;
+  border-radius: 6px;
+  padding: 4px 8px;
+  text-align: left;
+  width: auto;
+}
+.CRM .statisticWrapper .Customers .dataWrapper ul li img {
+  width: 36px;
+  height: 36px;
+  padding: 0px;
+  border-radius: 50%;
+}
+.CRM .statisticWrapper .Customers .dataWrapper ul li .paidByIMG {
+  width: 50px;
+  height: 30px;
+  border-radius: 0;
+}
+.CRM .statisticWrapper .Customers .dataWrapper ul li .numbers {
+  font-size: 16px;
+}
+.CRM .statisticWrapper .Customers .dataWrapper ul li .name {
+  font-size: 16px;
+  width: 84px;
+  padding-right: 0px;
+  text-align: left;
+}
+.CRM .statisticWrapper .Customers .dataWrapper ul li .tasks {
+  font-size: 16px;
+  font-weight: 550;
+  padding: 0px;
+  width: 40px;
+  position: relative;
+  left: -18px;
+}
+.CRM .statisticWrapper .Customers .dataWrapper ul li .actions {
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+  width: 200px;
+  position: absolute;
+  right: 40px;
+}
+.CRM .statisticWrapper .Customers .dataWrapper ul li .actions .action {
+  align-items: center;
+  justify-content: start;
+  padding: 10px 4px;
+  cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
+  left: 10px;
+  padding-right: 10px;
+}
+.CRM .statisticWrapper .Customers .dataWrapper ul li .actions .action:hover {
+  background-color: #f5f5f5;
+}
+.CRM .statisticWrapper .Customers .dataWrapper ul li .actions .action svg {
+  width: 50px;
+  height: 20px;
+  color: #525252;
+  padding-left: 10px;
+}
+.sessions {
+  justify-content: left;
+  margin-right: 0px;
+  margin-left: 0px;
+  box-sizing: border-box;
+}
+.sessions .changingText {
+  padding: 0px;
+  width: auto;
+  color: #ff3e1d;
+}
+.sessions h6 {
+  margin: 0px;
+}
+.sessions h6 h4 {
+  margin-top: 6px;
+}
+.sessions svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  color: #ff3e1d;
+}
+.sessions img {
+  margin-bottom: 8px;
+}
+.chart {
+  box-sizing: border-box;
+  padding: 20px;
+  position: relative;
+}
+.PiechartRevenue div {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+}
+.TeamMembers .imgAndName {
+  width: 200px !important;
+}
+@media screen and (max-width: 1200px) {
+  .xl {
+    width: 100% !important;
+  }
+  .s {
+    width: 49% !important;
+  }
+  .chartWrapper {
+    height: 390px !important;
+  }
+  .threeChartsWrapper {
+    width: 100% !important;
+  }
+  .threeChartsWrapper .s {
+    width: 23% !important ;
+  }
+  .threeChartsWrapper .m {
+    width: 48% !important;
+    height: 180px !important;
+    margin-top: 0px !important;
+    margin-right: 0px;
+  }
+  .customerRatings {
+    width: 49% !important;
+  }
+  .Overview {
+    width: 48% !important;
+  }
+  .TopPart {
+    height: 600px !important;
+  }
+  .statisticWrapper {
+    width: calc(96vw - 100px) !important;
+    height: 2400px !important;
+  }
+  .statisticWrapper .totalOrder {
+    padding-right: 14px;
+  }
+  .statisticWrapper .statisticL {
+    width: 100% !important;
+  }
+  .statisticWrapper .statisticM {
+    width: 48% !important;
+  }
+  .statisticWrapper .OrderStatistics {
+    width: 49% !important;
+  }
+  .statisticWrapper .statisticL-1200 {
+    width: 100% !important;
+  }
+  .statisticWrapper .EarningReport,
+  .statisticWrapper .salesbyCountries {
+    width: 49% !important;
+  }
+  .statisticWrapper .salesAnalytics,
+  .statisticWrapper .SalesStates {
+    width: 48% !important;
+  }
+}

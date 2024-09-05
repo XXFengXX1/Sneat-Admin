@@ -1,0 +1,936 @@
+// opacity: open ? 1 : 0 ,transition:"0.2s",paddingLeft:open? "0px":"10px"
+.mainContentWrapper{
+
+    margin-top:20px;
+    box-sizing:border-box;
+    padding:0px;
+    height:auto;
+    gap: 20px;
+    z-index: 10000;
+    margin-left: 275px;
+    width: calc(96% - 240px);
+
+    
+    .chartWrapper{
+        height: 180px;
+        max-width: 1400px;
+        padding: 20px;
+        box-sizing: border-box;
+        width: calc(96vw - 240px);
+        margin: 0 auto;
+        justify-content: space-between;
+        padding: 0px;
+        gap:10px;
+         .chart{
+            box-shadow: 0px 2px 10px rgba(50, 71, 92, 0.1);
+            border-radius:8px;
+            height: 180px;
+         }
+         .xl{
+            width: 66%;
+         }
+         .s{
+            width: 15%;
+         } 
+         .m{
+            width: 32%;
+         }
+    }
+    .TopPart{
+      height:364px;
+    }
+}
+.userContent{
+   z-index: 2;
+   position: relative;
+}
+
+.CRM{
+   height: auto !important;
+   .contentWrapper{
+      justify-content: space-between;
+      img{
+         width: 220px;
+         height: 150px;
+         margin-right: 30px;
+      }
+      position: relative;
+      .conButton{
+         height: 32px;
+         font-size: 14px;
+         width: 115px;
+         outline-width: 2px;
+         background-color: rgba(255, 255, 255, 0);
+         line-height: 0px;
+         border:1px solid rgb(105, 108, 255);
+         border-radius: 4px;
+         position: relative;
+         margin-left: 12px;
+      }
+   }
+   .Overview{
+      height: 364px !important;
+   }
+
+   .customerRatings{
+      height: 364px !important;
+      box-sizing: border-box;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+      .leftWrapper{
+         border-right: 0.5px solid rgb(230,230,230);
+      }
+      .points{
+        margin-left: 0px;
+        .pointDifference{
+            background-color: rgba(105, 108, 255,0.1);
+            color: rgb(105, 108, 255);
+            padding: 4px 8px;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+      }
+      .ChartBlock{
+         position: relative;
+         align-items: center;
+         top:-40px;
+         .Percent{
+           position: absolute;
+           top: 80px;
+           font-size: 20px;
+           padding-left: 0px;
+           margin-right: 5px;
+         }
+         .growth{
+           position: absolute;
+           top: 114px;
+           padding-left: 0px;
+           margin-right: 5px;
+         }
+         canvas{
+            position: relative !important;
+            margin:0 auto !important;
+            top: -10px !important;
+         }
+      }
+      .companyGrowth{
+         position: absolute;
+         top: 220px;
+      }
+      .iconGroup{
+         position: relative;
+         top: -30px;
+         justify-content: center;
+         padding: 0px;
+         svg{
+            margin-right: 6px;
+            display: inline-block;
+            position: relative;
+            top: -10px;
+            padding: 8px;
+            box-sizing: border-box;
+            border-radius: 6px;
+         }
+         .group{
+            width: 118px;
+            padding: 0px;
+         }
+         .textWrapper{
+            display: inline-block;
+         }
+         .years{
+            font-size: 14px;
+            text-align: left;
+         }
+         .money{
+            font-size: 16px;
+         }
+      }
+   }
+   .threeChartsWrapper{
+      width: 32%;
+      justify-content: space-between;
+      padding: 0px;
+      margin: 0px;
+      .sessions{
+         width: 47%;
+
+         box-sizing: border-box;
+         .CRMStraiLineWrapper{
+            width: 200%;
+         }
+      }
+      .order{
+         width: 47%;
+         margin-right: 0px;
+         box-sizing: border-box;
+      }
+      .order{
+        justify-content: left;
+        margin-right: 0px;
+        margin-left: 0px;
+        box-sizing: border-box;
+        .changingText{
+           padding:0px;
+           width: auto;
+           color: rgb(113, 221, 55);
+        }
+        h6{
+           margin: 0px;
+           h4{
+              margin-top: 6px;
+           }
+        }
+        svg{
+           width: 16px;
+           height: 16px;
+           margin-right: 8px;
+           color: rgb(113, 221, 55);
+        }
+        img{
+           margin-bottom: 8px;
+        }
+     }
+      .profitReport{
+         margin-top: 22px;
+         width: 100%;
+         box-sizing: border-box;
+         height: 160px;
+         margin-left: 0px;
+         justify-content: space-between;
+         position: relative;
+         .textWrapper{
+           width: 121px;
+           padding: 0px;
+         }
+         .year{
+            font-size: 14px;
+            width: 100px;
+            margin-top: 10px;
+         }
+         .changingText{
+            padding:0px;
+            width: auto;
+            color: rgb(113, 221, 55);
+            text-align: left;
+         }
+         svg{
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+            color: rgb(113, 221, 55);
+         }
+         .text{
+            position:absolute;
+            text-align: center;
+            top:65px
+         }
+         .lineChart{
+            width: 180px;
+            padding: 0px;
+            height: 160px;
+            overflow: hidden;
+            canvas{
+            //    height: 300px !important;
+               position: relative !important;
+               top: -130px !important;
+            }
+         }
+      }
+      h5{
+         margin-bottom: 6px;
+      }
+      h4{
+         text-align: left;
+         margin-top: 4px;
+      }
+   }
+   .statisticWrapper{
+      height: 1426px;
+      max-width: 1400px;
+      padding: 20px;
+      box-sizing: border-box;
+      width: calc(96vw - 240px);
+      margin: 0 auto;
+      justify-content: space-between;
+      padding: 0px;
+      gap:10px;
+       .chart{
+          box-shadow: 0px 2px 10px rgba(50, 71, 92, 0.1);
+          border-radius:8px;
+          height: 450px;
+       }
+       .statisticM{
+          width: 32%;
+       }
+       .statisticL{
+         width: 49%;
+       }
+       .statisticXL{
+        width: 66%;
+       }
+       .OrderStatistics{
+         .header{
+            margin-bottom: 8px;
+         }
+         .subHeader{
+            margin-bottom: 20px;
+         }
+         .totalOrder{
+            width: 108%;
+            position: relative;
+         }
+         .chartWeekly{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            top: -50px;
+            right: -30px;
+            .textContainer{
+               display:flex;
+               align-items: center;
+               justify-content: center;
+               position: absolute;
+               margin-left: 6px;
+               margin-top: 8px;
+            }
+         }
+         .categoryList{
+            align-items: center;
+            list-style: none;
+            position: relative;
+            top: -60px;
+            li{
+               align-items: center;
+               margin-bottom: 20px;
+            }
+            .leftWrapper{
+              display: flex;
+              align-items: center;
+            }
+            .textWrapper{
+               width: 140px;
+               padding: 0px;
+               display: inline-block;
+               .header{
+                  font-size: 16px;
+                  margin-bottom: 4px;
+               }
+               p{
+                  font-size: 14px;
+                  padding: 0px;
+                  text-align: left;
+               }
+            }
+            .number {
+               font-size: 16px;
+               line-height: 50px;
+            }
+            svg{
+               width: 38px;
+               height: 38px;
+               border-radius: 4px;
+               padding: 8px;
+               box-sizing: border-box;
+               display: inline-block;
+               margin-right: 10px;
+            }
+         }
+       }
+       .TotalIncome{
+         overflow: hidden;
+         position: relative;
+         .topWrapper{
+            .leftWrapper{
+               svg{
+                  width: 50px;
+                  height: 50px;
+                  padding: 12px;
+                  box-sizing: border-box;
+                  display: inline-block;
+                  border-radius: 6px;
+               }
+            }
+            .rightText{
+               .header{
+                  font-size:16px ;
+                  
+               }
+               .changingText{
+                  font-size: 14px;
+                  color: #8fdf82;
+                  margin-left: 6px;
+                  font-weight: 0;
+                  svg{
+                     width: 16px;
+                     height: 16px;
+                     margin-right: 6px;
+                  }
+               }
+            }
+         }
+         .bottomWrapper{
+            position: relative;
+            .chartGroup{
+               position: relative;
+               left: -100px;
+            }
+            .textWrapper{
+                position: relative;
+                top: -80px;
+                text-align: left;
+                left: 40%;
+            }
+            canvas{
+               position: absolute !important;
+               left: 0 !important;
+            }
+            h6{
+               // left: 80px;
+            }
+         }
+         canvas{
+            position: relative !important;
+            left: -18% !important;
+         }
+       }
+       .EarningReport{
+         position: relative;
+         .categoryList{
+            top: 20px;
+            position: relative;
+            padding:0px;
+            align-items: center;
+            list-style: none;
+            position: relative;
+            li{
+               align-items: center;
+               margin-bottom: 20px;
+               svg{
+                padding: 6px;
+                width: 36px;
+                height: 36px;
+                border-radius: 6px;
+                margin-right: 10px;
+               }
+            }
+            .leftWrapper{
+              display: flex;
+              align-items: center;
+            }
+            .textWrapper{
+               width: auto;
+               padding: 0px;
+               display: inline-block;
+               .header{
+                  font-size: 16px;
+                  margin-bottom: 0px !important;
+               }
+               p{
+                  font-size: 14px;
+                  padding: 0px;
+                  text-align: left;
+                  font-weight: 550;
+               }
+            }
+            .number {
+               font-size: 14px;
+               line-height: 50px;
+               padding-left: 0px;
+            }
+            img{
+               width: 50px;
+               height: 50px;
+               border-radius: 4px;
+               padding: 8px;
+               box-sizing: border-box;
+               display: inline-block;
+               margin-right: 10px;
+            }
+         }
+       }
+       .TopProducts{
+         position: relative;
+         justify-content: space-between;
+         margin-left: 0px;
+         .purple{
+            color:rgb(105, 108, 255) ;
+            display: inline-block;
+         }
+         h5{
+            font-weight: 550;
+         }
+         .categoryList{
+
+            position: relative;
+            padding:0px;
+            align-items: center;
+            list-style: none;
+            position: relative;
+            width: 48%;
+            li{
+               align-items: center;
+               margin-bottom: 20px;
+            }
+            .leftWrapper{
+              display: flex;
+              align-items: center;
+            }
+            .textWrapper{
+               width: auto;
+               padding: 0px;
+               display: inline-block;
+               .header{
+                  font-size: 14px;
+                  margin-bottom: 4px;
+               }
+               p{
+                  font-size: 16px;
+                  padding: 0px;
+                  text-align: left;
+                  font-weight: 550;
+               }
+            }
+            .number {
+               font-size: 14px;
+               line-height: 50px;
+               padding-left: 0px;
+            }
+            img{
+               width: 50px;
+               height: 50px;
+               border-radius: 4px;
+               padding: 8px;
+               box-sizing: border-box;
+               display: inline-block;
+               margin-right: 10px;
+            }
+         }
+       }
+       .salesAnalytics{
+            overflow: hidden;
+            .difference{
+                align-items: center;
+                .detail{
+                    
+                }
+                h6{
+                    margin: 0px;
+                }
+            }
+            .mapWrapper{
+                width: 100%;
+                height: 350px;
+                overflow: hidden;
+                position: relative;
+                top: 20px;
+            }
+        
+       }
+       .salesbyCountries{
+        .categoryList{
+            position: relative;
+            padding:0px;
+            align-items: center;
+            list-style: none;
+            position: relative;
+            width: 100%;
+            li{
+               align-items: center;
+               margin-bottom: 12px;
+               .changingText{
+                    margin-left: 10px;
+                    padding:0px;
+                    width: auto;
+                    color: rgb(113, 221, 55);
+                    svg{
+                        width: 18px;
+                        height: 18px;
+                    }
+               }
+               .Down{
+                   color: rgb(255, 62, 29);
+               }
+            }
+            .leftWrapper{
+              display: flex;
+              align-items: center;
+            }
+            .textWrapper{
+               width: auto;
+               padding: 0px;
+               display: inline-block;
+               .header{
+                  font-size: 16px;
+                  margin-bottom: 4px;
+                  font-weight: 550;
+               }
+               p{
+                  font-size: 14px;
+                  padding: 0px;
+                  text-align: left;
+                  font-weight: 550;
+               }
+            }
+            .number {
+               font-size: 14px;
+               line-height: 50px;
+               padding-left: 0px;
+               font-weight: 550;
+            }
+            img{
+               width: 50px;
+               height: 50px;
+               border-radius: 50%;
+               padding: 8px;
+               box-sizing: border-box;
+               display: inline-block;
+               margin-right: 10px;
+            }
+         }
+       }
+       .SalesStates{
+        svg{
+            color: rgb(113, 221, 55);
+            height: 40px;
+            width: 40px;
+            margin-bottom: 10px;
+        }
+        .wrapper{
+            top: -20px;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            .percent{
+                position: absolute;
+            }
+        }
+        .textWrapper{
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            top: -60px;
+            svg{
+                width: 16px;
+                height: 16px;
+                margin: 0px;
+                margin-right: 10px;
+            }
+            .conversation{
+                svg{
+                    color: rgb(113, 221, 55);
+                }
+            }
+            .requirements{
+                svg{
+                    color: rgba(100,100, 100,0.3);
+                    width: 16px;
+
+                }
+            }
+            .text{
+              font-size: 15px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+        }
+       }
+     
+
+       .TeamMembers{
+          width: 49%;
+         .dataWrapper{
+            .annotate{
+               padding: 10px;
+               box-sizing: border-box;
+               position: relative;
+               margin-top: 10px;
+            }
+            .annotateText{
+               font-size: 14px;
+               padding: 0px;
+               position: relative;
+               text-align: left;
+            }
+            ul{
+
+               padding: 0px;
+               li{
+                  margin-top: 18px;
+                  .subtitles{
+                    font-size: 14px;
+                    width: auto;
+                  }
+                  .imgAndName{
+                    padding-left: 24px;
+                    padding-right: 0px;
+                    .name{
+                        font-weight: 550;
+                    }
+                  }
+                  .projects{
+                    font-size: 12px;
+                    border-radius: 6px;
+                    padding: 4px 8px;
+                    // margin-right: 5%;
+                    position: relative;
+                    left: -20px;
+                  }
+                  img{
+                     width: 40px;
+                     height: 40px;
+                     padding: 0px;
+                     border-radius: 50%;
+                  }
+                  .numbers{
+                     font-size: 16px;
+                  }
+                  .name{
+                     font-size: 16px;
+                     width:84px;
+                     padding-right: 0px;
+                     text-align: left;
+                  }
+                  .tasks{
+                     font-size: 16px;
+                     font-weight: 550;
+                     padding: 0px;
+
+                     width: 40px;
+                     position: relative;
+                     left: -18px;
+                  }
+                  .dataInPercentage{
+                     padding: 0px;
+                     canvas{
+                        position: absolute !important;
+                        left: -10px !important;
+                     }
+                  }
+               }
+            }
+         }
+       }
+       .Customers{
+          width: 49%;
+         .dataWrapper{
+            .annotate{
+               padding: 10px;
+               box-sizing: border-box;
+               position: relative;
+               padding-top: 0px;
+            }
+            .annotateText{
+               font-size: 14px;
+               padding: 0px;
+               position: relative;
+               text-align: left;
+            }
+            ul{
+
+               padding: 0px;
+               li{
+                position: relative;
+                border-top: 0.5px solid rgba(100,100,100,0.2);
+                //   margin-top: 18px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                  .subtitles{
+                    font-size: 14px;
+                    width: auto;
+                  }
+                  .imgAndName{
+                    padding-left: 24px;
+                    padding-right: 0px;
+                    width: 210px;
+                    .name{
+                        font-weight: 550;
+                    }
+                  }
+                  .amount{
+                    font-weight: 600;
+                    text-align: left;
+                    padding: 0px;
+                  }
+                  .projectsWrapper{
+                    padding: 0px;
+                  }
+                  .projects{
+                    font-size: 12px;
+                    border-radius: 6px;
+                    padding: 4px 8px;
+                    // margin-right: 5%;
+                    text-align: left;
+                    width: auto;
+   
+                  }
+                  img{
+                     width: 36px;
+                     height: 36px;
+                     padding: 0px;
+                     border-radius: 50%;
+                  }
+                  .paidByIMG{
+                      width: 50px;
+                      height: 30px;
+                      border-radius: 0;
+
+                  }
+                  .numbers{
+                     font-size: 16px;
+                  }
+                  .name{
+                     font-size: 16px;
+                     width:84px;
+                     padding-right: 0px;
+                     text-align: left;
+                  }
+                  .tasks{
+                     font-size: 16px;
+                     font-weight: 550;
+                     padding: 0px;
+
+                     width: 40px;
+                     position: relative;
+                     left: -18px;
+                  }
+                  .actions{
+                    align-items: center;
+                    background-color: #fff;
+                    box-shadow: 0px 5px 10px rgba(0,0,0,0.15);
+                    width: 200px;
+                    position: absolute;
+                    right: 40px;
+                    .action{
+                        align-items: center;
+                        justify-content: start;
+                        padding: 10px 4px;
+                        cursor: pointer;
+                        box-sizing: border-box;
+                        position: relative;
+                        left: 10px;
+                        padding-right: 10px;
+                        &:hover{
+                            background-color: #f5f5f5;
+                        }
+                        svg{
+                            width: 50px;
+                            height: 20px;
+                            color: rgb(82, 82, 82);
+                            padding-left: 10px;
+                        }
+                    }
+                  }
+
+               }
+            }
+         }
+       }
+
+   }
+}
+.sessions{
+   justify-content: left;
+   margin-right: 0px;
+   margin-left: 0px;
+   box-sizing: border-box;
+   .changingText{
+      padding:0px;
+      width: auto;
+      color: rgb(255, 62, 29);
+   }
+   h6{
+      margin: 0px;
+      h4{
+         margin-top: 6px;
+      }
+   }
+   svg{
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+      color: rgb(255, 62, 29);
+   }
+   img{
+      margin-bottom: 8px;
+   }
+}
+.chart{
+   box-sizing: border-box;
+   padding: 20px;
+   position: relative;
+}
+.PiechartRevenue{
+   div{
+      display: flex !important;
+      justify-content: center !important;
+      width: 100% !important;
+   }
+}
+.TeamMembers{
+    .imgAndName{
+        width: 200px !important;
+    }
+}
+@media screen and (max-width: 1200px){
+   .xl{
+      width: 100% !important;
+   }
+   .s{
+      width: 49% !important;
+   }
+   .chartWrapper{
+      height: 390px !important;
+   }
+   .threeChartsWrapper{
+      width: 100% !important;
+      .s{
+         width: 23% !important ;
+      }
+      .m{
+         width: 48% !important;
+         height: 180px !important;
+         margin-top: 0px !important;
+         margin-right: 0px;
+      }
+   }
+   .customerRatings{
+    width: 49% !important;
+   }
+   .Overview{
+    width: 48% !important;
+   }
+   .TopPart{
+      height: 600px !important;
+   }
+   .statisticWrapper{
+      width:calc(96vw - 100px) !important;
+      height: 2400px !important;
+      .totalOrder{
+        padding-right: 14px;
+      }
+      .statisticL{
+         width: 100% !important;
+
+      }
+      .statisticM{
+         width: 48% !important;
+      }
+      .OrderStatistics{
+         width: 49% !important;
+      }
+      .statisticL-1200{
+         width: 100% !important;
+      }
+      .EarningReport, .salesbyCountries{
+        width: 49% !important;
+      }
+      .salesAnalytics, .SalesStates{
+        width: 48% !important;
+      }
+
+   }
+}

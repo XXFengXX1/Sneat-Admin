@@ -16,7 +16,8 @@ export const openSlice = createSlice(
         initialState,
         reducers:{
            updateOpen: state =>{
-             state.open = !state.open
+            console.log("dispatching...")
+            return {open : !state.open}
            }
         }
     }

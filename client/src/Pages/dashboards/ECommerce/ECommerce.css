@@ -1,0 +1,948 @@
+.ECommerce .mainContentWrapper {
+  margin-top: 20px;
+  box-sizing: border-box;
+  padding: 0px;
+  height: auto;
+  gap: 20px;
+  z-index: 10000;
+  margin-left: 275px;
+  width: calc(96% - 240px);
+}
+.ECommerce .mainContentWrapper .chartWrapper {
+  height: 180px;
+  max-width: 1400px;
+  padding: 20px;
+  box-sizing: border-box;
+  width: calc(96vw - 240px);
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 0px;
+  gap: 10px;
+}
+.ECommerce .mainContentWrapper .chartWrapper .chart {
+  box-shadow: 0px 2px 10px rgba(50, 71, 92, 0.1);
+  border-radius: 8px;
+  height: 180px;
+}
+.ECommerce .mainContentWrapper .chartWrapper .xl {
+  width: 66%;
+}
+.ECommerce .mainContentWrapper .chartWrapper .s {
+  width: 15%;
+}
+.ECommerce .userContent {
+  z-index: 2;
+  position: relative;
+}
+.up {
+  color: #71dd37;
+}
+.down {
+  color: red;
+}
+.ECommerce {
+  height: auto !important;
+}
+.ECommerce .RevenuechartWrapper {
+  height: 364px ;
+}
+.ECommerce .littleCongradualation {
+  width: 100%;
+  box-sizing: border-box;
+  height: 160px;
+  margin-left: 0px;
+  justify-content: space-between;
+  position: relative;
+}
+.ECommerce .littleCongradualation .textWrapper {
+  width: 170px;
+  padding: 0px;
+  text-align: left;
+}
+.ECommerce .littleCongradualation img {
+  width: 100px;
+}
+.ECommerce .littleCongradualation .lineChart {
+  padding: 0px;
+  height: 160px;
+  overflow: hidden;
+}
+.ECommerce .littleCongradualation .lineChart canvas {
+  height: 300px !important;
+  position: relative !important;
+  top: -80px !important;
+}
+.ECommerce .newVisitors {
+  height: 180px;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #fff;
+}
+.ECommerce .newVisitors h4 {
+  height: 25px;
+  font-weight: 550;
+}
+.ECommerce .newVisitors .leftWrapper {
+  width: 49%;
+}
+.ECommerce .newVisitors .headerWrapper {
+  padding-left: 20px;
+}
+.ECommerce .newVisitors .rightWrapper {
+  width: 49%;
+}
+.ECommerce .newVisitors .sub {
+  display: inline-block;
+  text-align: right;
+}
+.ECommerce .newVisitors .changingText {
+  padding: 0px;
+  width: auto;
+  color: #ff3e1d;
+}
+.ECommerce .newVisitors .changingText svg {
+  width: 18px;
+}
+.ECommerce .newVisitors .rightWrapper .changingText {
+  color: #71dd37;
+}
+.ECommerce .newVisitors .picWrapper {
+  border-right: 0.5px solid rgba(100, 100, 100, 0.2);
+  position: relative;
+  top: -40px;
+  align-items: center;
+  justify-content: space-between;
+}
+.ECommerce .newVisitors .picWrapper .textWrapper {
+  position: relative;
+  top: 20px;
+}
+.ECommerce .newVisitors .picWrapper .textWrapper h2 {
+  margin-bottom: 4px;
+}
+.ECommerce .newVisitors .picWrapper canvas {
+  position: relative !important;
+  right: -20px !important;
+}
+.ECommerce .contentWrapper {
+  justify-content: space-between;
+  position: relative;
+}
+.ECommerce .orderWrapper {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  position: absolute;
+  top: 25px;
+  display: flex;
+  left: 0px;
+}
+.ECommerce .sales {
+  justify-content: left;
+  margin-right: 0px;
+  margin-left: 0px;
+  box-sizing: border-box;
+}
+.ECommerce .sales .changingText {
+  padding: 0px;
+  width: auto;
+  color: #71dd37;
+}
+.ECommerce .sales h6 {
+  margin: 0px;
+}
+.ECommerce .sales h6 h4 {
+  margin-top: 6px;
+}
+.ECommerce .sales svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  color: #71dd37;
+}
+.ECommerce .sales img {
+  margin-bottom: 8px;
+}
+.ECommerce .totalIncome {
+  height: 380px !important;
+  box-sizing: border-box;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.ECommerce .totalIncome .leftWrapper {
+  border-right: 0.5px solid #e6e6e6;
+}
+.ECommerce .totalIncome .leftWrapper canvas {
+  top: -40px !important;
+}
+.ECommerce .totalIncome .middleLine {
+  position: absolute;
+  top: -20px;
+  left: 65%;
+  width: 1px;
+  padding: 0px;
+  height: 400px;
+  background-color: rgba(100, 100, 100, 0.1);
+}
+.ECommerce .totalIncome .iconGroup {
+  position: relative;
+  top: 0px;
+  justify-content: center;
+  padding: 0px;
+  gap: 14px;
+  margin-top: 22px;
+}
+.ECommerce .totalIncome .iconGroup img {
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.ECommerce .totalIncome .iconGroup .group {
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: #f5f5f9;
+}
+.ECommerce .totalIncome .iconGroup .textWrapper {
+  display: inline-block;
+}
+.ECommerce .totalIncome .iconGroup .kind {
+  font-size: 16px;
+  text-align: left;
+}
+.ECommerce .totalIncome .iconGroup .money {
+  font-size: 20px;
+  font-weight: 550;
+}
+.ECommerce .totalIncome .iconGroup .difference {
+  text-align: left;
+  display: inline-block;
+  font-size: 14px;
+  padding-left: 4px;
+}
+.ECommerce .totalIncome .iconGroup .up {
+  color: #71dd37;
+}
+.ECommerce .totalIncome .iconGroup .down {
+  color: red;
+}
+.ECommerce .RevenuechartWrapper {
+  height: 400px;
+}
+.ECommerce .RevenuechartWrapper .threeChartsWrapper {
+  width: 32%;
+  justify-content: space-between;
+  padding: 0px;
+  margin: 0px;
+}
+.ECommerce .RevenuechartWrapper .threeChartsWrapper .chart {
+  height: 180px;
+}
+.ECommerce .RevenuechartWrapper .threeChartsWrapper .expense {
+  width: 47%;
+  box-sizing: border-box;
+  margin-left: 0px;
+}
+.ECommerce .RevenuechartWrapper .threeChartsWrapper .expense .graphWrapper {
+  align-items: center;
+  justify-content: center;
+  margin-left: 0px;
+  position: relative;
+  top: -290px;
+}
+.ECommerce .RevenuechartWrapper .threeChartsWrapper .expense .graphWrapper .textWrapper {
+  position: absolute;
+  top: 320px;
+  align-items: center;
+  justify-content: center;
+}
+.ECommerce .RevenuechartWrapper .threeChartsWrapper .expense .graphWrapper .textWrapper h4,
+.ECommerce .RevenuechartWrapper .threeChartsWrapper .expense .graphWrapper .textWrapper h6 {
+  text-align: center;
+}
+.ECommerce .RevenuechartWrapper .threeChartsWrapper .expense .graphWrapper .textWrapper h4 {
+  margin-bottom: 6px;
+}
+.ECommerce .RevenuechartWrapper .threeChartsWrapper .expense .graphWrapper canvas {
+  position: absolute !important;
+  width: 100% !important;
+  height: 500px !important;
+}
+.ECommerce .RevenuechartWrapper .threeChartsWrapper .expense .graphWrapper .wrapper {
+  padding: 0px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 160px;
+}
+.ECommerce .RevenuechartWrapper .threeChartsWrapper .Profit {
+  width: 47%;
+  box-sizing: border-box;
+}
+.ECommerce .RevenuechartWrapper .threeChartsWrapper .Profit canvas {
+  top: -20px !important;
+  left: 8px !important;
+}
+.ECommerce .RevenuechartWrapper .threeChartsWrapper .profitReport {
+  margin-top: 22px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 160px;
+  margin-left: 0px;
+  justify-content: space-between;
+  position: relative;
+}
+.ECommerce .RevenuechartWrapper .threeChartsWrapper .profitReport .textWrapper {
+  width: 121px;
+  padding: 0px;
+}
+.ECommerce .RevenuechartWrapper .threeChartsWrapper .profitReport .year {
+  background-color: rgba(255, 171, 0, 0.2);
+  font-size: 12px;
+  width: 80px;
+  text-align: center;
+  padding: 1px 2px;
+  margin-top: 10px;
+}
+.ECommerce .RevenuechartWrapper .threeChartsWrapper .profitReport .changingText {
+  padding: 0px;
+  width: auto;
+  color: #71dd37;
+  text-align: left;
+}
+.ECommerce .RevenuechartWrapper .threeChartsWrapper .profitReport svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  color: #71dd37;
+}
+.ECommerce .RevenuechartWrapper .threeChartsWrapper .profitReport .lineChart {
+  padding: 0px;
+  height: 160px;
+  overflow: hidden;
+}
+.ECommerce .RevenuechartWrapper .threeChartsWrapper .profitReport .lineChart canvas {
+  height: 300px !important;
+  position: relative !important;
+  top: -80px !important;
+}
+.ECommerce .RevenuechartWrapper .threeChartsWrapper h5 {
+  margin-bottom: 6px;
+}
+.ECommerce .RevenuechartWrapper .threeChartsWrapper h4 {
+  text-align: left;
+  margin-top: 4px;
+}
+.ECommerce .statisticWrapper {
+  height: 1040px;
+  max-width: 1400px;
+  padding: 20px;
+  box-sizing: border-box;
+  width: calc(96vw - 240px);
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 0px;
+  gap: 10px;
+}
+.ECommerce .statisticWrapper .chart {
+  box-shadow: 0px 2px 10px rgba(50, 71, 92, 0.1);
+  border-radius: 8px;
+  height: 500px;
+}
+.ECommerce .statisticWrapper .statisticM {
+  width: 32%;
+}
+.ECommerce .statisticWrapper .statisticL {
+  width: 49%;
+}
+.ECommerce .statisticWrapper .threeChartsWrapper {
+  width: 32%;
+  justify-content: space-between;
+  padding: 0px;
+  margin: 0px;
+  height: 500px;
+}
+.ECommerce .statisticWrapper .threeChartsWrapper .chart {
+  height: 200px;
+}
+.ECommerce .statisticWrapper .threeChartsWrapper .eExpense {
+  height: 270px;
+  margin-left: 0px;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+.ECommerce .statisticWrapper .threeChartsWrapper .eExpense canvas {
+  position: absolute !important;
+  top: -30px !important;
+  right: -10px !important;
+}
+.ECommerce .statisticWrapper .threeChartsWrapper .eExpense .textWrapper {
+  justify-content: space-between;
+  width: 40%;
+  height: 270px;
+}
+.ECommerce .statisticWrapper .threeChartsWrapper .eExpense h3,
+.ECommerce .statisticWrapper .threeChartsWrapper .eExpense h5 {
+  padding-left: 0px;
+}
+.ECommerce .statisticWrapper .threeChartsWrapper .eExpense h3 {
+  margin-bottom: 0px;
+}
+.ECommerce .statisticWrapper .threeChartsWrapper .eExpense .year {
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100px;
+  height: 30px;
+}
+.ECommerce .statisticWrapper .threeChartsWrapper .eExpense .changingText {
+  font-size: 16px;
+  padding-left: 0px;
+  padding-top: 10px;
+}
+.ECommerce .statisticWrapper .threeChartsWrapper .eExpense .changingText svg {
+  width: 20px;
+  height: 20px;
+  padding-left: 0px;
+}
+.ECommerce .statisticWrapper .threeChartsWrapper h5 {
+  margin-bottom: 6px;
+}
+.ECommerce .statisticWrapper .threeChartsWrapper h4 {
+  text-align: left;
+  margin-top: 4px;
+}
+.ECommerce .statisticWrapper .threeChartsWrapper .processBar {
+  width: 50%;
+  overflow: hidden;
+  background-color: #ececec;
+  border-radius: 10px;
+  height: 10px;
+  position: relative;
+  padding-left: 0px;
+}
+.ECommerce .statisticWrapper .threeChartsWrapper .processBar .process {
+  border-radius: 10px;
+  height: 10px;
+  position: relative;
+  left: -14px;
+}
+.ECommerce .statisticWrapper .threeChartsWrapper .revenue {
+  justify-content: space-between;
+}
+.ECommerce .statisticWrapper .threeChartsWrapper .difference {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 70px;
+  height: 24px;
+  color: #03c3ec;
+}
+.ECommerce .statisticWrapper .threeChartsWrapper .text {
+  text-align: left;
+  margin-top: 20px;
+}
+.ECommerce .statisticWrapper .threeChartsWrapper .salesTarget {
+  align-items: center;
+  margin-left: 0px;
+  margin-top: 12px;
+}
+.ECommerce .statisticWrapper .Performance .legend {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ECommerce .statisticWrapper .Performance .legend .legendGroup {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.ECommerce .statisticWrapper .Performance .legend .legendGroup .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 8px;
+}
+.ECommerce .statisticWrapper .Performance .header {
+  margin-bottom: 8px;
+}
+.ECommerce .statisticWrapper .Performance .subHeader {
+  margin-bottom: 20px;
+}
+.ECommerce .statisticWrapper .Performance .totalOrder {
+  width: 108%;
+  position: relative;
+}
+.ECommerce .statisticWrapper .Performance .chartWeekly {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -50px;
+  right: -30px;
+}
+.ECommerce .statisticWrapper .Performance .chartWeekly .textContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin-left: 6px;
+  margin-top: 8px;
+}
+.ECommerce .statisticWrapper .Performance .categoryList {
+  align-items: center;
+  list-style: none;
+  position: relative;
+  top: -80px;
+}
+.ECommerce .statisticWrapper .Performance .categoryList li {
+  align-items: center;
+  margin-bottom: 20px;
+}
+.ECommerce .statisticWrapper .Performance .categoryList .leftWrapper {
+  display: flex;
+  align-items: center;
+}
+.ECommerce .statisticWrapper .Performance .categoryList .textWrapper {
+  width: 140px;
+  padding: 0px;
+  display: inline-block;
+}
+.ECommerce .statisticWrapper .Performance .categoryList .textWrapper .header {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.ECommerce .statisticWrapper .Performance .categoryList .textWrapper p {
+  font-size: 14px;
+  padding: 0px;
+  text-align: left;
+}
+.ECommerce .statisticWrapper .Performance .categoryList .number {
+  font-size: 16px;
+  line-height: 50px;
+}
+.ECommerce .statisticWrapper .Performance .categoryList svg {
+  width: 38px;
+  height: 38px;
+  border-radius: 4px;
+  padding: 8px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: 10px;
+}
+.ECommerce .statisticWrapper .ConversionRate {
+  overflow: hidden;
+  position: relative;
+}
+.ECommerce .statisticWrapper .ConversionRate .graphWrapper {
+  margin-top: 40px;
+}
+.ECommerce .statisticWrapper .ConversionRate .graphWrapper .textWrapper {
+  align-items: center;
+  display: flex;
+}
+.ECommerce .statisticWrapper .ConversionRate .graphWrapper .textWrapper .changingText {
+  padding: 0px;
+}
+.ECommerce .statisticWrapper .ConversionRate .topWrapper .leftWrapper svg {
+  width: 50px;
+  height: 50px;
+  padding: 12px;
+  box-sizing: border-box;
+  display: inline-block;
+  border-radius: 6px;
+}
+.ECommerce .statisticWrapper .ConversionRate .topWrapper .rightText {
+  text-align: left;
+}
+.ECommerce .statisticWrapper .ConversionRate .topWrapper .rightText .header {
+  font-size: 16px ;
+}
+.ECommerce .statisticWrapper .ConversionRate .topWrapper .rightText .changingText {
+  font-size: 14px;
+  color: #8fdf82;
+  margin-left: 6px;
+  font-weight: 0;
+}
+.ECommerce .statisticWrapper .ConversionRate .topWrapper .rightText .changingText svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+.ECommerce .statisticWrapper .ConversionRate .categoryList {
+  margin-top: 20px;
+  top: 20px;
+  padding: 0px;
+  align-items: center;
+  list-style: none;
+  position: relative;
+}
+.ECommerce .statisticWrapper .ConversionRate .categoryList li {
+  align-items: center;
+  margin-bottom: 24px;
+}
+.ECommerce .statisticWrapper .ConversionRate .categoryList li svg {
+  padding: 6px;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.ECommerce .statisticWrapper .ConversionRate .categoryList li .up {
+  color: #71dd37;
+}
+.ECommerce .statisticWrapper .ConversionRate .categoryList li .down {
+  color: red;
+}
+.ECommerce .statisticWrapper .ConversionRate .categoryList .leftWrapper {
+  display: flex;
+  align-items: center;
+}
+.ECommerce .statisticWrapper .ConversionRate .categoryList .textWrapper {
+  width: auto;
+  padding: 0px;
+  display: inline-block;
+}
+.ECommerce .statisticWrapper .ConversionRate .categoryList .textWrapper .header {
+  font-size: 18px;
+  margin-bottom: 0px !important;
+  font-weight: 550;
+}
+.ECommerce .statisticWrapper .ConversionRate .categoryList .textWrapper p {
+  font-size: 14px;
+  padding: 0px;
+  text-align: left;
+  font-weight: 550;
+}
+.ECommerce .statisticWrapper .ConversionRate .categoryList .number {
+  font-size: 16px;
+  line-height: 50px;
+  padding-left: 0px;
+}
+.ECommerce .statisticWrapper .ConversionRate .categoryList img {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  padding: 8px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: 10px;
+}
+.ECommerce .statisticWrapper .Transactions {
+  position: relative;
+}
+.ECommerce .statisticWrapper .Transactions .categoryList {
+  top: 20px;
+  padding: 0px;
+  align-items: center;
+  list-style: none;
+  position: relative;
+}
+.ECommerce .statisticWrapper .Transactions .categoryList li {
+  align-items: center;
+  margin-bottom: 20px;
+}
+.ECommerce .statisticWrapper .Transactions .categoryList .leftWrapper {
+  display: flex;
+  align-items: center;
+}
+.ECommerce .statisticWrapper .Transactions .categoryList .textWrapper {
+  width: auto;
+  padding: 0px;
+  display: inline-block;
+}
+.ECommerce .statisticWrapper .Transactions .categoryList .textWrapper .header {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.ECommerce .statisticWrapper .Transactions .categoryList .textWrapper p {
+  font-size: 16px;
+  padding: 0px;
+  text-align: left;
+  font-weight: 550;
+}
+.ECommerce .statisticWrapper .Transactions .categoryList .number {
+  font-size: 14px;
+  line-height: 50px;
+  padding-left: 0px;
+}
+.ECommerce .statisticWrapper .Transactions .categoryList img {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  padding: 8px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: 10px;
+}
+.ECommerce .statisticWrapper .Products {
+  width: 66%;
+}
+.ECommerce .statisticWrapper .Products .dataWrapper .annotate {
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  padding-top: 0px;
+}
+.ECommerce .statisticWrapper .Products .dataWrapper .annotateText {
+  font-size: 12px;
+  padding: 0px;
+  position: relative;
+  text-align: left;
+}
+.ECommerce .statisticWrapper .Products .dataWrapper ul {
+  padding: 0px;
+}
+.ECommerce .statisticWrapper .Products .dataWrapper ul li {
+  position: relative;
+  border-top: 0.5px solid rgba(100, 100, 100, 0.2);
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+.ECommerce .statisticWrapper .Products .dataWrapper ul li .subtitles {
+  font-size: 14px;
+  width: auto;
+  text-align: left;
+}
+.ECommerce .statisticWrapper .Products .dataWrapper ul li .imgAndName {
+  padding-left: 24px;
+  padding-right: 0px;
+  width: 190px;
+}
+.ECommerce .statisticWrapper .Products .dataWrapper ul li .imgAndName .name {
+  font-weight: 550;
+  width: 100%;
+}
+.ECommerce .statisticWrapper .Products .dataWrapper ul li .imgAndName .subtitles {
+  font-size: 14px;
+  text-align: left;
+}
+.ECommerce .statisticWrapper .Products .dataWrapper ul li .imgAndName img {
+  width: 30px;
+}
+.ECommerce .statisticWrapper .Products .dataWrapper ul li .imgAndName .textWrapper {
+  padding-right: 0px;
+}
+.ECommerce .statisticWrapper .Products .dataWrapper ul li .payments {
+  padding: 0px;
+  text-align: left;
+  font-weight: 550;
+}
+.ECommerce .statisticWrapper .Products .dataWrapper ul li .category {
+  font-weight: 550;
+  text-align: left;
+  padding: 0px;
+  width: 20%;
+}
+.ECommerce .statisticWrapper .Products .dataWrapper ul li .category svg {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 6px;
+  margin-right: 4px;
+}
+.ECommerce .statisticWrapper .Products .dataWrapper ul li .statusWrapper {
+  padding: 0px;
+}
+.ECommerce .statisticWrapper .Products .dataWrapper ul li .status {
+  font-size: 12px;
+  border-radius: 6px;
+  padding: 4px 8px;
+  text-align: left;
+  width: auto;
+}
+.ECommerce .statisticWrapper .Products .dataWrapper ul li .confirmed {
+  color: #696cff;
+  background-color: rgba(105, 108, 255, 0.2);
+}
+.ECommerce .statisticWrapper .Products .dataWrapper ul li .completed {
+  color: #71dd37;
+  background-color: rgba(113, 221, 55, 0.2);
+}
+.ECommerce .statisticWrapper .Products .dataWrapper ul li .concelled {
+  color: red;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+.ECommerce .statisticWrapper .Products .dataWrapper ul li img {
+  width: 36px;
+  height: 36px;
+  padding: 0px;
+  border-radius: 50%;
+}
+.ECommerce .statisticWrapper .Products .dataWrapper ul li .paidByIMG {
+  width: 50px;
+  height: 30px;
+  border-radius: 0;
+}
+.ECommerce .statisticWrapper .Products .dataWrapper ul li .numbers {
+  font-size: 16px;
+}
+.ECommerce .statisticWrapper .Products .dataWrapper ul li .name {
+  font-size: 16px;
+  width: 84px;
+  padding-right: 0px;
+  text-align: left;
+}
+.ECommerce .statisticWrapper .Products .dataWrapper ul li .tasks {
+  font-size: 16px;
+  font-weight: 550;
+  padding: 0px;
+  width: 40px;
+  position: relative;
+  left: -18px;
+}
+.ECommerce .statisticWrapper .Products .dataWrapper ul li .actions {
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+  width: 200px;
+  position: absolute;
+  right: 40px;
+}
+.ECommerce .statisticWrapper .TotalBalance {
+  width: 32%;
+}
+.ECommerce .statisticWrapper .TotalBalance .iconGroup {
+  position: relative;
+  top: 0px;
+  margin-top: 20px;
+  padding: 0px;
+  justify-content: start;
+  gap: 40px   ;
+  margin-left: 0px;
+}
+.ECommerce .statisticWrapper .TotalBalance .iconGroup svg {
+  margin-right: 6px;
+  display: inline-block;
+  position: relative;
+  top: -14px;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+}
+.ECommerce .statisticWrapper .TotalBalance .iconGroup .group {
+  width: 118px;
+  padding: 0px;
+}
+.ECommerce .statisticWrapper .TotalBalance .iconGroup .textWrapper {
+  display: inline-block;
+}
+.ECommerce .statisticWrapper .TotalBalance .iconGroup .years {
+  font-size: 16px;
+  text-align: left;
+}
+.ECommerce .statisticWrapper .TotalBalance .iconGroup .money {
+  font-size: 18px;
+  font-weight: 600;
+}
+.ECommerce .statisticWrapper .TotalBalance .graphWrapper {
+  margin-top: 260px;
+}
+.ECommerce .statisticWrapper .TotalBalance .statementWrapper {
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  border-top: 1px solid #00000022;
+}
+.ECommerce .statisticWrapper .TotalBalance .statementWrapper .years {
+  text-align: left;
+  font-size: 14px;
+}
+.ECommerce .statisticWrapper .TotalBalance .statementWrapper svg {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+.ECommerce .payments {
+  justify-content: left;
+  margin-right: 0px;
+  margin-left: 0px;
+  box-sizing: border-box;
+}
+.ECommerce .payments .changingText {
+  padding: 0px;
+  width: auto;
+  color: #ff3e1d;
+}
+.ECommerce .payments h6 {
+  margin: 0px;
+}
+.ECommerce .payments h6 h4 {
+  margin-top: 6px;
+}
+.ECommerce .payments svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  color: #ff3e1d;
+}
+.ECommerce .payments img {
+  margin-bottom: 8px;
+}
+.ECommerce .chart {
+  box-sizing: border-box;
+  padding: 20px;
+  position: relative;
+}
+.ECommerce .PiechartRevenue div {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+}
+@media screen and (max-width: 1200px) {
+  .ECommerce .xl {
+    width: 100% !important;
+  }
+  .ECommerce .s {
+    width: 49% !important;
+  }
+  .ECommerce .chartWrapper {
+    height: 390px !important;
+  }
+  .ECommerce .threeChartsWrapper {
+    width: 100% !important;
+  }
+  .ECommerce .threeChartsWrapper .s {
+    width: 23% !important ;
+  }
+  .ECommerce .threeChartsWrapper .m {
+    width: 48% !important;
+    height: 180px !important;
+    margin-top: 0px !important;
+    margin-right: 0px;
+  }
+  .ECommerce .threeChartsWrapper .Analytics .totalRevenChartBlock {
+    height: 600px !important;
+  }
+  .ECommerce .threeChartsWrapper .statisticWrapper {
+    width: calc(96vw - 100px) !important;
+    height: 2140px !important;
+  }
+  .ECommerce .threeChartsWrapper .statisticWrapper .totalOrder {
+    padding-right: 14px;
+  }
+  .ECommerce .threeChartsWrapper .statisticWrapper .statisticL {
+    width: 100% !important;
+  }
+  .ECommerce .threeChartsWrapper .statisticWrapper .statisticM {
+    width: 48% !important;
+  }
+  .ECommerce .threeChartsWrapper .statisticWrapper .OrderStatistics {
+    width: 49% !important;
+  }
+  .ECommerce .threeChartsWrapper .statisticWrapper .statisticL-1200 {
+    width: 100% !important;
+  }
+}

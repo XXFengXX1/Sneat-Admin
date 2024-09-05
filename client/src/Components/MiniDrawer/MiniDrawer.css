@@ -18,9 +18,10 @@
   z-index: 10000;
   margin-left: 275px;
   width: calc(96% - 240px);
+  transition: 0.5s;
 }
 .mainContentWrapper .barWrapper {
-  height: 180px;
+  height: 70px;
   max-width: 1400px;
   padding: 20px;
   box-sizing: border-box;
@@ -44,4 +45,35 @@
   .mainContentWrapper .chartWrapper {
     width: 90% !important;
   }
+}
+.bacColor {
+  background-color: #eeeff4;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+.MiniDrawer .mainContentWrapper {
+  margin-top: 0px;
+}
+.MiniDrawer .profileWrapper {
+  border-radius: 50%;
+  background-color: #eeeff400;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+}
+.MiniDrawer .profileWrapper img {
+  width: 40px;
+  height: 40px;
+}
+.MiniDrawer .rightOptions,
+.MiniDrawer .leftOption {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  align-items: center;
+  gap: 14px;
 }

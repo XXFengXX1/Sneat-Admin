@@ -26,7 +26,15 @@ import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
 import favicon from '/Users/xiongfeng/Sneat/client/img/Logo/favicon.png';
 import "./MiniDrawer/MiniDrawer.css"
-import { DisplaySettings } from '@mui/icons-material';
+import { DisplaySettings, Scale } from '@mui/icons-material';
+import { useAppDispatch } from '../Redux/pre-Typing-hooks';
+import { updateOpen } from '../Redux/openSlice';
+import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
+import avatar1 from '/Users/xiongfeng/Sneat/client/img/avatars/1.png'
+import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
+import AnalyticsOutlinedIcon from '@mui/icons-material/AnalyticsOutlined';
+import AutoGraphOutlinedIcon from '@mui/icons-material/AutoGraphOutlined';
+import { useNavigate } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -143,18 +151,23 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 );
 
 export default function MiniDrawer() {
+
   const theme = useTheme();
   const [open, setOpen] = React.useState(true);
   const [Baropen, setBarOpen] = React.useState(true);
   //hide the drawer when the screen is medium size
   // const [hide, setHide] = React.useState(false);
+  const reduxDispatch = useAppDispatch();
+  const [contentOpen, setContentOpen] = React.useState(true)
 
   const {state,dispatch} = React.useContext(ThemeContext)
 
   const macthes:boolean = useMediaQuery(`(min-width:1200px)`)
+  console.log('stateHeaderColor',state.fontHeaderColor)
 
   const handleHoverDrawerOpen = () => {
     setOpen(true);
+    
   };
 
   const handleHoverDrawerClose = () => {
@@ -165,12 +178,15 @@ export default function MiniDrawer() {
 
   const handleDrawerBarOpen = () => {
     setOpen(true);
+    reduxDispatch(updateOpen())
+    setContentOpen(!contentOpen)
     // setBarOpen(true)
   }
 
   const handleDrawerBarClose = () => {
     setOpen(false);
     setBarOpen(false)
+    
   }
 
   const handleDrawerOpenClose = () => {
@@ -180,24 +196,36 @@ export default function MiniDrawer() {
       setOpen(true)
       setBarOpen(true)
     }
+    setContentOpen(!contentOpen)
+    reduxDispatch(updateOpen())
   }
 
-  // React.useEffect(()=>{
-  //   const handleHoverDrawerOpen = () => {
-      
-  //   }
-  //   document.addEventListener()
-  // },[])
+  /** Get raw path name from window
+   *  remove the '/'
+   *  get real pathName
+   */ 
+
+  let rawPathName:string = window.location.pathname
+  let pathArr:string[] = rawPathName.split('/')
+
+  let pathName:string = pathArr[1]
+
+  /** Navigate to other route */
+  const navigate = useNavigate()
+  const handleRouter = (route:string) => {
+    navigate(route)
+  }
+  
 
   return (
-    <Box sx={{ display: 'flex',
+    <Box className="MiniDrawer" sx={{ display: 'flex',
       "& .MuiDrawer-docked":{
         width:"0px",
         height:"0px"
       }
     }}>
       <CssBaseline />
-      <div className="mainContentWrapper" style={{marginLeft:open?"270px":"100px"}}>
+      <div className="mainContentWrapper" style={{marginLeft:contentOpen?"270px":"100px",width:contentOpen?"calc(96% - 240px)" :"calc(96% - 60px)"}}>
         <div className="barWrapper">
           <AppBar position="fixed" open={Baropen} matches={macthes} className='row'
           sx={{
@@ -211,47 +239,66 @@ export default function MiniDrawer() {
             marginRight:"0px",
             marginLeft:"0px",
             width: "100% !important",
-            ...(open && {marginLeft:"30px"})
+            // ...(contentOpen && {marginLeft:"30px"})
           }}>
             <Toolbar sx={{
-              // margin:"0 auto"
+              display:"flex",
+              justifyContent:"space-between",
+              alignItems:"center"
             }}>
-              <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                onClick={handleDrawerBarOpen}
-                edge="start"
-                sx={{
-                  marginRight: 5,
-                  ...(macthes && { display: 'none' }),
-                  color:"#000"
-                }}
-              >
-                <MenuIcon />
-              </IconButton>
-              <SearchIcon sx={{
-                color:"#000",
-                opacity:"0.5"
-              }} />
-              <Typography variant="h6" noWrap component="div"
-              sx={{
-                opacity:0.3,
-                fontSize:"16px",
-                letterSpacing:"1.24px",
-                paddingLeft:"10px",
-                color:`${state.fontPColor}`
-              }}
-              >
-                Search(Ctrl+/)
-              </Typography>
-              <div className="iconWrapper" onClick={() => dispatch({type:"CHANGE_THEME"})}>
-                <WbSunnyOutlinedIcon sx={{color:"#000"}}/>
+              <div className="leftOption">
+                  <IconButton
+                    color="inherit"
+                    aria-label="open drawer"
+                    onClick={handleDrawerBarOpen}
+                    edge="start"
+                    sx={{
+                      marginRight: 5,
+                      ...(macthes && { display: 'none' }),
+                      color:`${state.fontHeaderColor}`
+                    }}
+                  >
+                    <MenuIcon />
+                  </IconButton>
+                  <SearchIcon sx={{
+                    color:`${state.fontHeaderColor}`,
+                    opacity:"0.5"
+                  }} />
+                  <Typography variant="h6" noWrap component="div"
+                  sx={{
+                    opacity:1,
+                    fontSize:"16px",
+                    letterSpacing:"1.24px",
+                    color:`${state.fontPColor}`
+                  }}
+                  >
+                    Search(Ctrl+/)
+                  </Typography>
               </div>
+
+
+              <div className="rightOptions">
+
+                <div className="iconWrapper" onClick={() => dispatch({type:"CHANGE_THEME"})}>
+                  <WbSunnyOutlinedIcon sx={{color:`${state.fontHeaderColor}`}}/>
+
+                </div>
+                <div className="iconWrapper2">
+                  <NotificationsNoneOutlinedIcon sx={{color:`${state.fontHeaderColor}`}} />
+                </div>
+
+                <div className="profileWrapper">
+                  <img src={avatar1} alt="" />
+                </div>
+
+              </div>
+
             </Toolbar>
           </AppBar>
         </div>
       </div>
       <Drawer variant="permanent" open={open} onMouseOver={handleHoverDrawerOpen} onMouseLeave={handleHoverDrawerClose} matches={macthes} sx={{
+        zIndex:"10000",
         backgroundColor:`${state.themeColorMain}`,
         width:"auto",
         height:"auto",
@@ -275,17 +322,19 @@ export default function MiniDrawer() {
             position:"absolute",
             right:"-20px",
             backgroundColor:`${mainColor}`,
-            border:`6px solid #f5f5f5`,
+            border:`6px solid ${state.themeColorBac}`,
             color:"#fff",
             width:"38px",
             height:"38px",
+            cursor:"pointer",
             outline:"none",
             ...(!open&& {display:`none`}),            
             ":hover":{
               backgroundColor:`${mainColor}`,
-              border:`6px solid #f5f5f5`,
+              border:`6px solid ${state.themeColorBac}`,
               color:"#fff",
-              outline:"none"             
+              outline:"none",
+              translate:'scale(1.1)'
             },
             ":active":{
               outline:"none"
@@ -300,9 +349,41 @@ export default function MiniDrawer() {
             {open&&Baropen ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
         </DrawerHeader>
-        <Divider />
+        
+        <Divider style={{color:'rgba(150,150,150,0.3)'}} />
         <List sx={{backgroundColor:`${state.themeColorMain}`}}>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          {['Analytics', 'CRM', 'eCommerce'].map((text, index) => (
+            <ListItem key={text} disablePadding sx={{ display: 'block' ,borderRadius:"3px",
+              ...(pathName === text?{borderRight:"4px solid rgb(105, 108, 255,1)"}:{border:"none"}),
+            }}>
+              <ListItemButton 
+                sx={{
+                  minHeight: 48,
+                  justifyContent: open ? 'initial' : 'center',
+                  px: 2.5,
+                  ...(pathName===text? {backgroundColor:`${state.sideBarChoosen}`,
+                    borderRadius:"10px",marginBottom:"4px",boxSizing:"border-box",marginLeft:"20px",width:"85%"}:{
+                      borderRadius:"10px",marginBottom:"4px",boxSizing:"border-box",marginLeft:"20px",width:"85%",border:"none"}),   
+                }}
+                onClick={()=>{return handleRouter(text)}}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : 'auto',
+                    justifyContent: 'center',
+                  }}
+                >
+                  {index == 0 ? <AnalyticsOutlinedIcon style={{...(pathName===text? {color:`${state.sideBarTextColor}`}:{color:`${state.fontHeaderColor}`, }),  }} /> : index == 1? <AutoGraphOutlinedIcon style={{...(pathName===text? {color:`${state.sideBarTextColor}`}:{color:`${state.fontHeaderColor}`, }),  }}  /> :<AddShoppingCartOutlinedIcon style={{...(pathName===text? {color:`${state.sideBarTextColor}`}:{color:`${state.fontHeaderColor}`, }),  }}  />}
+                </ListItemIcon>
+                <ListItemText primary={text} sx={{ opacity: open ? 1 : 0, ...(pathName===text? {color:`${state.sideBarTextColor}`}:{color:`${state.fontHeaderColor}`, }),   }} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+        <Divider style={{color:'rgba(150,150,150,0.3)'}} />
+        {/* <List sx={{backgroundColor:`${state.themeColorMain}`}}>
+          {['Chat', 'Trash', 'Spam'].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 sx={{
@@ -318,41 +399,16 @@ export default function MiniDrawer() {
                     justifyContent: 'center',
                   }}
                 >
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {index % 2 === 0 ? <AnalyticsOutlinedIcon/> : <AutoGraphOutlinedIcon/>}
                 </ListItemIcon>
                 <ListItemText primary={text} sx={{ opacity: open ? 1 : 0,color:`${state.fontHeaderColor}` }} />
               </ListItemButton>
             </ListItem>
           ))}
-        </List>
-        <Divider />
-        <List sx={{backgroundColor:`${state.themeColorMain}`}}>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem key={text} disablePadding sx={{ display: 'block' }}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? 'initial' : 'center',
-                  px: 2.5,
-                }}
-              >
-                <ListItemIcon
-                  sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : 'auto',
-                    justifyContent: 'center',
-                  }}
-                >
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} sx={{ opacity: open ? 1 : 0,color:`${state.fontHeaderColor}` }} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
+        </List> */}
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-
+         <div className="bacColor" style={{backgroundColor:`${state.themeColorBac}`}}></div>
       </Box>
     </Box>
   );
