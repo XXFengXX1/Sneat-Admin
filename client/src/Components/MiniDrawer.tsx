@@ -56,10 +56,11 @@ const closedMixin = (theme: Theme): CSSObject => ({
     duration: theme.transitions.duration.leavingScreen,
   }),
   overflow: 'visible',
-  width: `calc(${theme.spacing(7)} + 1px)`,
-  [theme.breakpoints.up('sm')]: {
-    width: `calc(${theme.spacing(8)} + 1px)`,
-  },
+  // width: `calc(${theme.spacing(7)} + 1px)`,
+  // [theme.breakpoints.up('sm')]: {
+  //   width: `calc(${theme.spacing(8)} + 1px)`,
+  // },
+  width:"84px"
 });
 
 const hidedMixin = (theme: Theme): CSSObject => ({
@@ -349,7 +350,7 @@ export default function MiniDrawer() {
             {open&&Baropen ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
         </DrawerHeader>
-        
+
         <Divider style={{color:'rgba(150,150,150,0.3)'}} />
         <List sx={{backgroundColor:`${state.themeColorMain}`}}>
           {['Analytics', 'CRM', 'eCommerce'].map((text, index) => (
@@ -362,8 +363,12 @@ export default function MiniDrawer() {
                   justifyContent: open ? 'initial' : 'center',
                   px: 2.5,
                   ...(pathName===text? {backgroundColor:`${state.sideBarChoosen}`,
-                    borderRadius:"10px",marginBottom:"4px",boxSizing:"border-box",marginLeft:"20px",width:"85%"}:{
-                      borderRadius:"10px",marginBottom:"4px",boxSizing:"border-box",marginLeft:"20px",width:"85%",border:"none"}),   
+                    }:{border:"none"}),   
+                  borderRadius:"10px",
+                  marginBottom:"4px",
+                  boxSizing:"border-box",
+                  
+                  ...(open? {marginLeft:"20px",width:"85%",}:{marginRight:"10px",width:"75%",marginLeft:"10px"})
                 }}
                 onClick={()=>{return handleRouter(text)}}
               >

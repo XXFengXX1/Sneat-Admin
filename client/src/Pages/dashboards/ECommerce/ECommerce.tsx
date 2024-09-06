@@ -95,7 +95,7 @@ export default function ECommerce({}: Props) {
     <div className='ECommerce mainContentWrapper row userContent' style={{ marginLeft:open?"270px":"100px",width:open?"calc(96% - 240px)" :"calc(96% - 60px)"}}>
        <div className="chartWrapper col-8 col row" style={{}}>
 
-       <div className="chart s littleCongradualation row m" style={{backgroundColor:`${state.themeColorMain}`,marginLeft:"0px"}}>
+       <div className="chart littleCongradualation row " style={{backgroundColor:`${state.themeColorMain}`,marginLeft:"0px"}}>
             <div className="textWrapper col-6">
 
               <h6 style={{color:`${state.fontHeaderColor}`,marginBottom:'6px',textAlign:"left",fontSize:"16px",fontWeight:"550"}}>Congratulations Katie!</h6>
@@ -150,7 +150,7 @@ export default function ECommerce({}: Props) {
         </div>
        </div>
 
-       <div className="RevenuechartWrapper col-8 col row totalRevenChartBlock chartWrapper" style={{}}>
+       <div className="RevenuechartWrapper col-8 col row totalRevenChartBlock chartWrapper EComTotalRevenue" style={{}}>
 
 
         <div className="threeChartsWrapper col-auto row" >
@@ -185,7 +185,7 @@ export default function ECommerce({}: Props) {
             </div>
           </div>
 
-          <div className="chart s sales row" style={{backgroundColor:`${state.themeColorMain}`,width:"47%"}}>
+          <div className="chart s sales transactionSales row" style={{backgroundColor:`${state.themeColorMain}`,width:"47%"}}>
           <img src={verticalCard} alt="" style={{width:"42px",height:"42px",padding:"0px"}} className='col-12' />
           <h6 className='col-12' style={{color:`${state.fontPColor}`,marginBottom:'10px',textAlign:"left",padding:"0px"}}>Transactions<br></br><h4 className='col-12' style={{color:`${state.fontHeaderColor}`}}>$14,854</h4></h6>
             <div className="changingText col-12">
@@ -350,7 +350,7 @@ export default function ECommerce({}: Props) {
          
          </div>
 
-         <div className="threeChartsWrapper col-auto row" >
+         <div className="threeChartsWrapper EcStaThreeWrapper col-auto row" >
 
             <div className="chart s revenue sales row" style={{backgroundColor:`${state.themeColorMain}`,width:"47%"}}>
               <img src={Desktop} alt="" style={{width:"42px",height:"42px",padding:"0px"}} className='col-12' />
@@ -401,7 +401,7 @@ export default function ECommerce({}: Props) {
 
           </div>
 
-        <div className="Products chart statisticL" style={{backgroundColor:`${state.themeColorMain}`}}>
+        <div className="Products EcProducts chart statisticL" style={{backgroundColor:`${state.themeColorMain}`}}>
 
             <div className="dataWrapper">
               <div className="annotate row justify-content-between align-items-center">

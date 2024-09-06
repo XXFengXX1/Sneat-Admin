@@ -587,6 +587,8 @@
   }
   .threeChartsWrapper {
     width: 100% !important;
+    height: 180px !important;
+    margin-top: 10px !important;
   }
   .threeChartsWrapper .s {
     width: 23% !important ;
@@ -597,26 +599,26 @@
     margin-top: 0px !important;
     margin-right: 0px;
   }
-  .threeChartsWrapper .Analytics .totalRevenChartBlock {
-    height: 600px !important;
+  .totalRevenChartBlock {
+    height: 580px !important;
   }
-  .threeChartsWrapper .statisticWrapper {
+  .Analytics .statisticWrapper {
     width: calc(96vw - 100px) !important;
-    height: 2140px !important;
+    height: 2100px !important;
   }
-  .threeChartsWrapper .statisticWrapper .totalOrder {
+  .Analytics .statisticWrapper .totalOrder {
     padding-right: 14px;
   }
-  .threeChartsWrapper .statisticWrapper .statisticL {
+  .Analytics .statisticWrapper .statisticL {
     width: 100% !important;
   }
-  .threeChartsWrapper .statisticWrapper .statisticM {
+  .Analytics .statisticWrapper .statisticM {
     width: 48% !important;
   }
-  .threeChartsWrapper .statisticWrapper .OrderStatistics {
+  .Analytics .statisticWrapper .OrderStatistics {
     width: 49% !important;
   }
-  .threeChartsWrapper .statisticWrapper .statisticL-1200 {
+  .Analytics .statisticWrapper .statisticL-1200 {
     width: 100% !important;
   }
 }

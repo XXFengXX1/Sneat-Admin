@@ -818,61 +818,61 @@
   width: 200px !important;
 }
 @media screen and (max-width: 1200px) {
-  .xl {
+  .CRM .xl {
     width: 100% !important;
   }
-  .s {
+  .CRM .s {
     width: 49% !important;
   }
-  .chartWrapper {
+  .CRM .chartWrapper {
     height: 390px !important;
   }
-  .threeChartsWrapper {
+  .CRM .threeChartsWrapper {
     width: 100% !important;
   }
-  .threeChartsWrapper .s {
+  .CRM .threeChartsWrapper .s {
     width: 23% !important ;
   }
-  .threeChartsWrapper .m {
+  .CRM .threeChartsWrapper .m {
     width: 48% !important;
     height: 180px !important;
     margin-top: 0px !important;
     margin-right: 0px;
   }
-  .customerRatings {
+  .CRM .customerRatings {
     width: 49% !important;
   }
-  .Overview {
+  .CRM .Overview {
     width: 48% !important;
   }
-  .TopPart {
+  .CRM .TopPart {
     height: 600px !important;
   }
-  .statisticWrapper {
+  .CRM .statisticWrapper {
     width: calc(96vw - 100px) !important;
     height: 2400px !important;
   }
-  .statisticWrapper .totalOrder {
+  .CRM .statisticWrapper .totalOrder {
     padding-right: 14px;
   }
-  .statisticWrapper .statisticL {
+  .CRM .statisticWrapper .statisticL {
     width: 100% !important;
   }
-  .statisticWrapper .statisticM {
+  .CRM .statisticWrapper .statisticM {
     width: 48% !important;
   }
-  .statisticWrapper .OrderStatistics {
+  .CRM .statisticWrapper .OrderStatistics {
     width: 49% !important;
   }
-  .statisticWrapper .statisticL-1200 {
+  .CRM .statisticWrapper .statisticL-1200 {
     width: 100% !important;
   }
-  .statisticWrapper .EarningReport,
-  .statisticWrapper .salesbyCountries {
+  .CRM .statisticWrapper .EarningReport,
+  .CRM .statisticWrapper .salesbyCountries {
     width: 49% !important;
   }
-  .statisticWrapper .salesAnalytics,
-  .statisticWrapper .SalesStates {
+  .CRM .statisticWrapper .salesAnalytics,
+  .CRM .statisticWrapper .SalesStates {
     width: 48% !important;
   }
 }
