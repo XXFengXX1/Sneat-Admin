@@ -24,13 +24,13 @@ import SearchIcon from '@mui/icons-material/Search';
 import { ThemeContext } from '../ThemeContext/ThemeContext';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
-import favicon from '/Users/xiongfeng/Sneat/client/img/Logo/favicon.png';
+import favicon from '../../img/Logo/favicon.png';
 import "./MiniDrawer/MiniDrawer.css"
 import { DisplaySettings, Scale } from '@mui/icons-material';
 import { useAppDispatch } from '../Redux/pre-Typing-hooks';
 import { updateOpen } from '../Redux/openSlice';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
-import avatar1 from '/Users/xiongfeng/Sneat/client/img/avatars/1.png'
+import avatar1 from '../../img/avatars/1.png'
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
 import AnalyticsOutlinedIcon from '@mui/icons-material/AnalyticsOutlined';
 import AutoGraphOutlinedIcon from '@mui/icons-material/AutoGraphOutlined';
