@@ -5,7 +5,7 @@ import { ThemeContext } from '../../ThemeContext/ThemeContext';
 
 const EarningReport: React.FC = () => {
   const chartRef = useRef<HTMLDivElement | null>(null);
-  const {state,dispatch} = React.useContext(ThemeContext);
+  const {state} = React.useContext(ThemeContext);
 
   const [width,setWidth] = React.useState(window.innerWidth)
 

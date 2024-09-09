@@ -1,21 +1,10 @@
 import './CRM.css'
-import React, { useContext } from 'react'
+import React from 'react'
 import { ThemeContext } from '../../../ThemeContext/ThemeContext'
-import {updateOpen} from '../../../Redux/openSlice'
-import { useAppSelector,useAppDispatch } from '../../../Redux/pre-Typing-hooks'
-import illus from '../../../../img/illustrations/man-with-laptop-light.png'
-import { color } from 'echarts'
-import LineChart from '../../../Components/LineChart/LinChart'
-import salesimg from '../../../../img/salesimg.png'
+
+import { useAppSelector} from '../../../Redux/pre-Typing-hooks'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import paypalIcon from '../../../../img/stats-vertical-paypal.png'
-import wallet from '../../../../img/wallet.png'
-import chart from '../../../../img/chart.png'
-import creditCart from '../../../../img/credit-card.png'
-import statsver from '../../../../img/stats-vertical-paypal.png'
-import atmCard from '../../../../img/atm-card.png'
 import CRMBarChart from '../../../Components/CRMBarChart/CRMBarChart'
-import { Line } from 'echarts/types/src/util/graphic.js'
 import CRMLineChart from '../../../Components/CRMLineChart/CRMLineChart'
 import StarIcon from '@mui/icons-material/Star';
 import CRMStraiLineChart from '../../../Components/CRMStraiLineChart/CRMStraiLineChart'
@@ -31,7 +20,6 @@ import envy from '../../../../img/envy.png'
 import iMac from '../../../../img/iMac.png'
 import nord from '../../../../img/oneplus-nord-success.png'
 import watch from '../../../../img/watch.png'
-import RevenueBarChart from '../../../Components/RevenueBarChart/RevenueBarChart'
 import EarningReport from '../../../Components/EarningReport/EarningReport'
 import ShowChartOutlinedIcon from '@mui/icons-material/ShowChartOutlined';
 import AttachMoneyOutlinedIcon from '@mui/icons-material/AttachMoneyOutlined';
@@ -58,17 +46,14 @@ import customer2 from '../../../../img/customer2.png'
 import customer3 from '../../../../img/customer3.png'
 import customer4 from '../../../../img/customer4.png'
 import customer5 from '../../../../img/customer5.png'
-import customer6 from '../../../../img/customer6.png'
+
 import visaLight from '../../../../img/visa-light.png'
 import visaDark from '../../../../img/visa-dark.png'
 import paypalLight from '../../../../img/paypal-light.png'
 import paypalDark from '../../../../img/paypal-dark.png'
 import masterCardLight from '../../../../img/mastercard-light.png'
 import masterCardDark from '../../../../img/mastercard-dark.png'
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
-import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
-import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+
 
 type Props = {}
 
@@ -76,9 +61,7 @@ export default function CRM({}: Props) {
   const mainColor:String = "rgb(105, 108, 255)"
   const open = useAppSelector(state => state.open.open)
 
-  const {state,dispatch} = React.useContext(ThemeContext);
-  const drawerWidth = 240
-
+  const {state} = React.useContext(ThemeContext);
 
 
   return (

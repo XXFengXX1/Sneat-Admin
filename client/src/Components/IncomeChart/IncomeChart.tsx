@@ -1,10 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-import ReactEcharts from 'echarts-for-react';
 import * as echarts from 'echarts/core';
 import { LineChart } from 'echarts/charts';
 import { GridComponent } from 'echarts/components';
 import { CanvasRenderer } from 'echarts/renderers';
-import { color, graphic } from 'echarts'
 
 import { ThemeContext } from '../../ThemeContext/ThemeContext';
 
@@ -15,7 +13,7 @@ echarts.use([LineChart, GridComponent, CanvasRenderer]);
 const IncomeChart: React.FC = () => {
 
   const chartRef = useRef<HTMLDivElement | null>(null);
-  const {state,dispatch} = React.useContext(ThemeContext);
+  const {state} = React.useContext(ThemeContext);
   const [width,setWidth] = React.useState(window.innerWidth)
 
   useEffect(() => {

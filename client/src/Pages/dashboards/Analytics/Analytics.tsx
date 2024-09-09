@@ -1,11 +1,11 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import './Analytics.css'
 import { ThemeContext } from '../../../ThemeContext/ThemeContext'
-import {updateOpen} from '../../../Redux/openSlice'
-import { useAppSelector,useAppDispatch } from '../../../Redux/pre-Typing-hooks'
+
+import { useAppSelector } from '../../../Redux/pre-Typing-hooks'
 
 import illus from "../../../../img/illustrations/man-with-laptop-light.png"
-import { color } from 'echarts'
+
 import LineChart from '../../../Components/LineChart/LinChart'
 import salesimg from '../../../../img/salesimg.png'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
@@ -27,7 +27,6 @@ import SigleLinePieChart from '../../../Components/SigleLinePieChart/SigleLinePi
 import wallet from '../../../../img/wallet.png'
 import chart from '../../../../img/chart.png'
 import creditCart from '../../../../img/credit-card.png'
-import statsver from '../../../../img/stats-vertical-paypal.png'
 import atmCard from '../../../../img/atm-card.png'
 import pdf from '../../../../img/pdf.png'
 import ceo from '../../../../img/ceo.png'
@@ -51,9 +50,7 @@ export default function Analytics({}: Props) {
   const mainColor:String = "rgb(105, 108, 255)"
   const open = useAppSelector(state => state.open.open)
 
-  const {state,dispatch} = React.useContext(ThemeContext);
-  const drawerWidth = 240
-
+  const {state} = React.useContext(ThemeContext);
   
   return (
     <div className='Analytics mainContentWrapper row userContent' style={{ marginLeft:open?"270px":"100px",width:open?"calc(96% - 240px)" :"calc(96% - 60px)"}}>

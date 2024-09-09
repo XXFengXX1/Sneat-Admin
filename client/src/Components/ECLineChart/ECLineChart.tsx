@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactEcharts from 'echarts-for-react';
-import { color } from 'echarts';
 import { graphic } from 'echarts'
-import { BorderStyle } from '@mui/icons-material';
 
 const ECLineChart: React.FC = () => {
   const getOption = () => {

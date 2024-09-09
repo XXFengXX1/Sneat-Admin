@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { styled, useTheme, Theme, CSSObject } from '@mui/material/styles';
+import { styled, Theme, CSSObject } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
@@ -16,21 +16,17 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import { useMediaQuery } from '@mui/material';
 import { DrawerProps } from '@mui/material/Drawer';
 import SearchIcon from '@mui/icons-material/Search';
-import { ThemeContext } from '../ThemeContext/ThemeContext';
-import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
+import { ThemeContext } from "../../ThemeContext/ThemeContext";
 import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
-import favicon from '../../img/Logo/favicon.png';
-import "./MiniDrawer/MiniDrawer.css"
-import { DisplaySettings, Scale } from '@mui/icons-material';
-import { useAppDispatch } from '../Redux/pre-Typing-hooks';
-import { updateOpen } from '../Redux/openSlice';
+import favicon from "../../../img/Logo/favicon.png" 
+import "./MiniDrawer.css"
+import { useAppDispatch } from '../../Redux/pre-Typing-hooks';
+import { updateOpen } from '../../Redux/openSlice';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
-import avatar1 from '../../img/avatars/1.png'
+import avatar1 from '../../../img/avatars/1.png'
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
 import AnalyticsOutlinedIcon from '@mui/icons-material/AnalyticsOutlined';
 import AutoGraphOutlinedIcon from '@mui/icons-material/AutoGraphOutlined';
@@ -153,7 +149,6 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 export default function MiniDrawer() {
 
-  const theme = useTheme();
   const [open, setOpen] = React.useState(true);
   const [Baropen, setBarOpen] = React.useState(true);
   //hide the drawer when the screen is medium size
@@ -183,13 +178,7 @@ export default function MiniDrawer() {
     setContentOpen(!contentOpen)
     // setBarOpen(true)
   }
-
-  const handleDrawerBarClose = () => {
-    setOpen(false);
-    setBarOpen(false)
-    
-  }
-
+  
   const handleDrawerOpenClose = () => {
     setOpen(!open)
     setBarOpen(!Baropen)

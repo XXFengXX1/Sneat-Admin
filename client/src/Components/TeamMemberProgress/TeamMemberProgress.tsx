@@ -1,4 +1,4 @@
-import React from 'react';
+
 import ReactEcharts from 'echarts-for-react';
 
 type Props = {

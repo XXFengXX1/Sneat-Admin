@@ -4,7 +4,7 @@ import { ThemeContext } from '../../ThemeContext/ThemeContext';
 
 const ECoBarChart: React.FC = () => {
   const chartRef = useRef<HTMLDivElement | null>(null);
-  const {state,dispatch} = React.useContext(ThemeContext);
+  const {state} = React.useContext(ThemeContext);
 
   const [width,setWidth] = React.useState(window.innerWidth)
 
@@ -55,10 +55,7 @@ const ECoBarChart: React.FC = () => {
           color: 'rgba(105, 108, 255,0.3)',
           barWidth:"13",
           itemStyle: {
-            normal: {
-              barBorderRadius: [50, 50, 50, 50],
-            },
-
+              borderRadius: [50, 50, 50, 50],
           }
         },
 

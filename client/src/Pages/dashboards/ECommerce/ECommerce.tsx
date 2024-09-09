@@ -1,7 +1,7 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import './ECommerce.css'
 import { ThemeContext } from '../../../ThemeContext/ThemeContext'
-import { useAppSelector,useAppDispatch } from '../../../Redux/pre-Typing-hooks'
+import { useAppSelector} from '../../../Redux/pre-Typing-hooks'
 import salesimg from '../../../../img/salesimg.png'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
@@ -39,7 +39,7 @@ import PhoneIphoneOutlinedIcon from '@mui/icons-material/PhoneIphoneOutlined';
 import MouseOutlinedIcon from '@mui/icons-material/MouseOutlined';
 import DesktopMacOutlinedIcon from '@mui/icons-material/DesktopMacOutlined';
 import LiveTvOutlinedIcon from '@mui/icons-material/LiveTvOutlined';
-import { Wallet, WalletOutlined } from '@mui/icons-material'
+
 import EcBalanceChart from '../../../Components/EcBalanceChart/EcBalanceChart'
 import ChevronRightOutlinedIcon from '@mui/icons-material/ChevronRightOutlined';
 
@@ -54,8 +54,8 @@ export default function ECommerce({}: Props) {
   const orange:String = "rgb(255, 171, 0)"
   const orangeBac:String ="rgb(255, 171, 0,0.15)"
 
-  const {state,dispatch} = React.useContext(ThemeContext);
-  const drawerWidth = 240
+  const {state} = React.useContext(ThemeContext);
+
 
   
   return (

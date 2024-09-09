@@ -4,7 +4,7 @@ import { ThemeContext } from '../../ThemeContext/ThemeContext';
 
 const SigleLinePieChart: React.FC = () => {
   const chartRef = useRef<HTMLDivElement | null>(null);
-  const {state,dispatch} = React.useContext(ThemeContext);
+  const {state} = React.useContext(ThemeContext);
 
   useEffect(() => {
     const chartInstance = echarts.init(chartRef.current!);

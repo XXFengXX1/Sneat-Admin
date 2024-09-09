@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactEcharts from 'echarts-for-react';
-import * as echarts from 'echarts';
 
 const Profit: React.FC = () => {
   // X-axis data and series data

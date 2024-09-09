@@ -5,12 +5,11 @@ import { ThemeContext } from '../../ThemeContext/ThemeContext';
 const BarChartRevenue: React.FC = () => {
   const chartRef = useRef<HTMLDivElement | null>(null);
   const [width,setWidth] = React.useState(window.innerWidth)
-  const {state,dispatch} = React.useContext(ThemeContext);
+  const {state} = React.useContext(ThemeContext);
 
   useEffect(() => {
     const chartInstance = echarts.init(chartRef.current!);
 
-    const xAxisData: string[] = [];
     const data1: number[] = [18, 6, 13, 28, 17, 12, 6];
     const data2: number[] = [-12, -17, -7, -13, -5, -18, -11];
     const dataName: string[] = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", 'Jul'];
@@ -40,7 +39,7 @@ const BarChartRevenue: React.FC = () => {
         type: 'category',
         data: dataName,
         name: 'X Axis',
-        axisLine: { onZero: true },
+        // axisLine: { onZero: true },
         splitLine: { show: false },
         splitArea: { show: false },
         axisLine: {
@@ -87,9 +86,7 @@ const BarChartRevenue: React.FC = () => {
           barWidth: "10",
           color: "rgb(105, 108, 255)",
           itemStyle: {
-            normal: {
-              barBorderRadius: [50, 50, 50, 50],
-            },
+              borderRadius: [50, 50, 50, 50],
           },
         },
         {
@@ -100,9 +97,7 @@ const BarChartRevenue: React.FC = () => {
           data: data2,
           color: "rgb(82, 205, 229)",
           itemStyle: {
-            normal: {
-              barBorderRadius: [50, 50, 50, 50],
-            },
+              borderRadius: [50, 50, 50, 50],
           },
         },
       ],

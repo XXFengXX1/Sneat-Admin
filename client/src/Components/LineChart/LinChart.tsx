@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactEcharts from 'echarts-for-react';
-import { color } from 'echarts';
 import { graphic } from 'echarts'
-import { BorderStyle } from '@mui/icons-material';
 
 const LineChart: React.FC = () => {
   const getOption = () => {
@@ -10,10 +8,6 @@ const LineChart: React.FC = () => {
       xAxis: {
         type: 'category',
         show:"",
-        // splitLine:{ show: false },
-        // axisLine: { show: false },
-        // axisTick: { show: false },
-        // axisLabel: { show: false }
       },
       yAxis: {
         type: 'value',

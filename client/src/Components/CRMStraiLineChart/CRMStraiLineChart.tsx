@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactEcharts from 'echarts-for-react';
 import { graphic } from 'echarts'
-import { LineStyle } from '@mui/icons-material';
 
 const CRMStraiLineChart: React.FC = () => {
   const option = {

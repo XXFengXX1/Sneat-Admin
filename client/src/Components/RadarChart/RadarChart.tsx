@@ -4,8 +4,6 @@ import * as echarts from 'echarts/core';
 import { RadarChart } from 'echarts/charts';
 import { TitleComponent, LegendComponent } from 'echarts/components';
 import { CanvasRenderer } from 'echarts/renderers';
-import { color } from 'echarts';
-import { LineStyle } from '@mui/icons-material';
 
 // Register the required components
 echarts.use([RadarChart, TitleComponent, LegendComponent, CanvasRenderer]);

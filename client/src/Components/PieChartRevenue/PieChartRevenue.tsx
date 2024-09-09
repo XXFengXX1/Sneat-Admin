@@ -6,7 +6,7 @@ const PieChartRevenue: React.FC = () => {
   const chartRef = useRef<HTMLDivElement | null>(null);
   let  [ArrColor,setArrColor] = React.useState([0.05, 'rgba(105, 108, 255,0.1)'])
 
-  const {state,dispatch} = React.useContext(ThemeContext);
+  const {state} = React.useContext(ThemeContext);
   
   let colorA: any[] =[]
   for(var i:number= 0.05;i<1;i = i +0.05){
@@ -15,11 +15,10 @@ const PieChartRevenue: React.FC = () => {
    
     ArrColor[0] = Number(ArrColor[0]) + 0.05
     ArrColor[1] = `rgba(105, 108, 255,${0.05 + i})`
-  
+
   }
 
-  
-
+   
   useEffect(() => {
     const chartInstance = echarts.init(chartRef.current!);
 

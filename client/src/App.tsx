@@ -1,11 +1,9 @@
-import { useState } from 'react'
+
 import{createBrowserRouter,RouterProvider,Outlet} from 'react-router-dom'
 import './App.css'
-import MiniDrawer from './Components/MiniDrawer'
+import MiniDrawer from './Components/MiniDrawer/MiniDrawer'
 import Analytics from './Pages/dashboards/Analytics/Analytics'
 import { ThemeProvider } from './ThemeContext/ThemeContext'
-import {updateOpen} from './Redux/openSlice'
-import { useAppSelector,useAppDispatch } from './Redux/pre-Typing-hooks'
 import {store} from './Redux/store'
 import { Provider } from 'react-redux'
 import CRM from './Pages/dashboards/CRM/CRM'
@@ -33,6 +31,9 @@ const router = createBrowserRouter([
     path:"/",
     element:<Layout/>,
     children:[{
+      path:"/",
+      element:<Analytics/>
+    },{
       path:"/Analytics",
       element:<Analytics/>
     },{
