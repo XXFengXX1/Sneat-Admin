@@ -1,18 +1,45 @@
 import React, { useEffect, useRef } from 'react';
 import * as echarts from 'echarts';
 import { ThemeContext } from '../../ThemeContext/ThemeContext';
+import axios from 'axios';
 
 const BarChartRevenue: React.FC = () => {
   const chartRef = useRef<HTMLDivElement | null>(null);
   const [width,setWidth] = React.useState(window.innerWidth)
   const {state,dispatch} = React.useContext(ThemeContext);
 
+  
+  const [chartData1,setChartData1] = React.useState(null || [])
+  const [chartData2,setChartData2] = React.useState(null || [])
+  const [clock,setClock] = React.useState(0)
+
+  const chartName1 = "BarChartRevenue1"
+  const chartName2 = "BarChartRevenue2"
+
+    const fetchData1 = async() => {
+      const res =await axios.get(`http://localhost:8800/api/fetch/fetchChartData?chartName=${chartName1}`);
+      console.log(res.data.chartData[0].data)
+      setChartData1(res.data.chartData[0].data);
+      
+      //set clock reset the data of the chart 
+      setTimeout(()=>{setClock(1)},100)
+    }
+
+    
+    const fetchData2 = async() => {
+      const res =await axios.get(`http://localhost:8800/api/fetch/fetchChartData?chartName=${chartName2}`);
+      console.log(res.data.chartData[0].data)
+      setChartData2(res.data.chartData[0].data);
+    }
+
   useEffect(() => {
     const chartInstance = echarts.init(chartRef.current!);
+    fetchData2()
+    fetchData1()
 
     const xAxisData: string[] = [];
-    const data1: number[] = [18, 6, 13, 28, 17, 12, 6];
-    const data2: number[] = [-12, -17, -7, -13, -5, -18, -11];
+    const data1: number[] = chartData1;
+    const data2: number[] = chartData2;
     const dataName: string[] = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", 'Jul'];
     
     const handleResize = () => setWidth(window.innerWidth)
@@ -139,7 +166,7 @@ const BarChartRevenue: React.FC = () => {
       chartInstance.dispose();
       window.removeEventListener("resize",handleResize)
     };
-  }, [width,state.fontPColor]);
+  }, [width,state.fontPColor,clock]);
 
   return <div ref={chartRef} style={{ width: '100%', height: '360px' }} />;
 };

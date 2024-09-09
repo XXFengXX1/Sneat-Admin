@@ -3,8 +3,25 @@ import ReactEcharts from 'echarts-for-react';
 import { color } from 'echarts';
 import { graphic } from 'echarts'
 import { BorderStyle } from '@mui/icons-material';
+import axios from 'axios';
 
 const LineChart: React.FC = () => {
+  const [chartData,setChartData] = React.useState(null || [])
+
+  const chartName = "orderLineChart"
+
+  React.useEffect (() => {
+    
+    const fetchData = async() => {
+      const res =await axios.get(`http://localhost:8800/api/fetch/fetchChartData?chartName=${chartName}`);
+      console.log(res.data.chartData[0].data)
+      setChartData(res.data.chartData[0].data);
+    }
+
+    fetchData()
+
+  },[])
+
   const getOption = () => {
     return {
       xAxis: {
@@ -22,7 +39,7 @@ const LineChart: React.FC = () => {
       series: [
         {
           name:"series1",
-          data: [10, 122, 20, 30, 80, 30,90],
+          data: chartData,
           type: 'line',
           smooth: true,
           color:"#8fdf82",

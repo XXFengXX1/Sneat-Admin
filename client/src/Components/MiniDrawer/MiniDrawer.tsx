@@ -21,16 +21,16 @@ import MailIcon from '@mui/icons-material/Mail';
 import { useMediaQuery } from '@mui/material';
 import { DrawerProps } from '@mui/material/Drawer';
 import SearchIcon from '@mui/icons-material/Search';
-import { ThemeContext } from '../ThemeContext/ThemeContext';
+import { ThemeContext } from '../../ThemeContext/ThemeContext';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
-import favicon from '../../img/Logo/favicon.png';
-import "./MiniDrawer/MiniDrawer.css"
+import favicon from '../../../img/Logo/favicon.png';
+import "./MiniDrawer.css"
 import { DisplaySettings, Scale } from '@mui/icons-material';
-import { useAppDispatch } from '../Redux/pre-Typing-hooks';
-import { updateOpen } from '../Redux/openSlice';
+import { useAppDispatch } from '../../Redux/pre-Typing-hooks';
+import { updateOpen } from '../../Redux/openSlice';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
-import avatar1 from '../../img/avatars/1.png'
+import avatar1 from "../../../img/avatars/1.png"
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
 import AnalyticsOutlinedIcon from '@mui/icons-material/AnalyticsOutlined';
 import AutoGraphOutlinedIcon from '@mui/icons-material/AutoGraphOutlined';
@@ -164,7 +164,6 @@ export default function MiniDrawer() {
   const {state,dispatch} = React.useContext(ThemeContext)
 
   const macthes:boolean = useMediaQuery(`(min-width:1200px)`)
-  console.log('stateHeaderColor',state.fontHeaderColor)
 
   const handleHoverDrawerOpen = () => {
     setOpen(true);

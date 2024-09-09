@@ -21,3 +21,31 @@ model User{
   avatar String?
   createdAt DateTime @default(now())
 } 
+
+model AnalyticsData{
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  order Int
+  sales Int
+  salesDifference Float
+  payments Int
+  paymentsDifference Float
+  ProfitReport Int
+  ProfitReportDifference Float
+  totalOrder Int
+  totalSales Int
+  orderStatisticWeekly Int
+  electronic Float
+  fashion Float
+  decor Float
+  sports Float
+  totalIncome Float
+  incomeDifference Float
+  chartDatas ChartData[] 
+}
+model ChartData{
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  name String
+  data Int []
+  owner AnalyticsData @relation(fields: [ownerId], references: [id])
+  ownerId String @db.ObjectId
+}

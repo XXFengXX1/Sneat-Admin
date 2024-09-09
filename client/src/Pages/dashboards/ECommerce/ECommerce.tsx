@@ -39,7 +39,6 @@ import PhoneIphoneOutlinedIcon from '@mui/icons-material/PhoneIphoneOutlined';
 import MouseOutlinedIcon from '@mui/icons-material/MouseOutlined';
 import DesktopMacOutlinedIcon from '@mui/icons-material/DesktopMacOutlined';
 import LiveTvOutlinedIcon from '@mui/icons-material/LiveTvOutlined';
-import { Wallet, WalletOutlined } from '@mui/icons-material'
 import EcBalanceChart from '../../../Components/EcBalanceChart/EcBalanceChart'
 import ChevronRightOutlinedIcon from '@mui/icons-material/ChevronRightOutlined';
 

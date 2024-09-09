@@ -3,8 +3,26 @@ import ReactEcharts from 'echarts-for-react';
 import { color } from 'echarts';
 import { graphic } from 'echarts'
 import { BorderStyle, WidthFull } from '@mui/icons-material';
+import axios from 'axios';
 
 const IncomeLineChart: React.FC = () => {
+
+  const [chartData,setChartData] = React.useState(null || [])
+
+  const chartName = "IncomeLineChart"
+
+  React.useEffect (() => {
+    
+    const fetchData = async() => {
+      const res =await axios.get(`http://localhost:8800/api/fetch/fetchChartData?chartName=${chartName}`);
+      console.log(res.data.chartData[0].data)
+      setChartData(res.data.chartData[0].data);
+    }
+
+    fetchData()
+
+  },[])
+
   const getOption = () => {
     return {
       xAxis: {
@@ -39,7 +57,7 @@ const IncomeLineChart: React.FC = () => {
       series: [
         {
           name:"series1",
-          data: [70, 52, 90, 60, 150, 98,120],
+          data: chartData,
           grid:{
             color:"rgba(105, 108, 255,0.3)"
           },

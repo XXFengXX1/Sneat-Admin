@@ -41,6 +41,7 @@ import firefox from '../../../../img/firefox.png'
 import opera from '../../../../img/opera.png'
 import brave from '../../../../img/brave.png'
 import edge from '../../../../img/edge.png'
+import axios from 'axios'
 
 
 
@@ -53,6 +54,40 @@ export default function Analytics({}: Props) {
 
   const {state,dispatch} = React.useContext(ThemeContext);
   const drawerWidth = 240
+
+  const [AnalyticsData,setAnalyticsData] = React.useState({
+    id: '66dda17ef767053c64ce0c30',
+    order: 0,
+    sales: 0,
+    salesDifference: 0,
+    payments: 0,
+    paymentsDifference: 0,
+    ProfitReport: 0,
+    ProfitReportDifference: 0,
+    totalOrder: 0,
+    totalSales: 0,
+    orderStatisticWeekly: 0,
+    electronic: 0,
+    fashion: 0,
+    decor: 0,
+    sports: 0,
+    totalIncome: 0,
+    incomeDifference: 0
+  })
+
+  React.useEffect (() => {
+    const fetchData = async() => {
+      await axios.get("http://localhost:8800/api/fetch/fetchAnalyticsData")
+      .then(res=>{
+        console.log(res.data)
+        setAnalyticsData(res.data.analyticsData);
+      })
+      .catch(err =>{
+        console.log("fail to get data")
+      })
+    }
+    fetchData()
+  },[])
 
   
   return (
@@ -70,17 +105,17 @@ export default function Analytics({}: Props) {
           </div>
         </div>
         <div className="chart s order" style={{backgroundColor:`${state.themeColorMain}`}}>
-          <h6 style={{color:`${state.fontPColor}`,marginBottom:'10px',textAlign:"left"}}>Order<br></br><h4 style={{color:`${state.fontHeaderColor}`}}>276k</h4></h6>
+          <h6 style={{color:`${state.fontPColor}`,marginBottom:'10px',textAlign:"left"}}>Order<br></br><h4 style={{color:`${state.fontHeaderColor}`}}>{AnalyticsData.order + "k"}</h4></h6>
           <div className="orderWrapper">
             <LineChart ></LineChart>
           </div>
         </div>
         <div className="chart s sales row" style={{backgroundColor:`${state.themeColorMain}`}}>
           <img src={salesimg} alt="" style={{width:"42px",height:"42px",padding:"0px"}} className='col-12' />
-          <h6 className='col-12' style={{color:`${state.fontPColor}`,marginBottom:'10px',textAlign:"left",padding:"0px"}}>Sales<br></br><h4 className='col-12' style={{color:`${state.fontHeaderColor}`}}>$4,679</h4></h6>
+          <h6 className='col-12' style={{color:`${state.fontPColor}`,marginBottom:'10px',textAlign:"left",padding:"0px"}}>Sales<br></br><h4 className='col-12' style={{color:`${state.fontHeaderColor}`}}>{"$" + AnalyticsData.sales }</h4></h6>
             <div className="changingText col-12">
               <ArrowUpwardIcon/>
-              28.14%
+              {AnalyticsData.salesDifference + "%"}
             </div>
         </div>
        </div>
@@ -133,10 +168,10 @@ export default function Analytics({}: Props) {
 
           <div className="chart s payments row" style={{backgroundColor:`${state.themeColorMain}`}}>
             <img src={paypalIcon} alt="" style={{width:"42px",height:"42px",padding:"0px"}} className='col-12' />
-            <h6 className='col-12' style={{color:`${state.fontPColor}`,marginBottom:'10px',textAlign:"left",padding:"0px"}}>Payments<br></br><h4 className='col-12' style={{color:`${state.fontHeaderColor}`}}>$2,468</h4></h6>
+            <h6 className='col-12' style={{color:`${state.fontPColor}`,marginBottom:'10px',textAlign:"left",padding:"0px"}}>Payments<br></br><h4 className='col-12' style={{color:`${state.fontHeaderColor}`}}>{"$" + AnalyticsData.payments }</h4></h6>
               <div className="changingText col-12">
                 <ArrowDownwardOutlinedIcon></ArrowDownwardOutlinedIcon>
-                14.82%
+                {AnalyticsData.paymentsDifference + "%"}
               </div>
           </div>
 
@@ -156,7 +191,7 @@ export default function Analytics({}: Props) {
                 68.2%
               </div>
               
-              <h4 style={{color:`${state.fontHeaderColor}`}}>$84,686k</h4>
+              <h4 style={{color:`${state.fontHeaderColor}`}}>{"$" + AnalyticsData.ProfitReport + "k"}</h4>
             </div>
             <div className="lineChart col-6">
                <ShadowLineChart></ShadowLineChart>
@@ -169,15 +204,15 @@ export default function Analytics({}: Props) {
        <div className="statisticWrapper row">
          <div className="OrderStatistics chart statisticM" style={{backgroundColor:`${state.themeColorMain}`}}>
             <h5 className='col-12 header' style={{color:`${state.fontHeaderColor}`,marginBottom:'10px',textAlign:"left",padding:"0px"}}>Order Statistic<br></br></h5>
-            <h6 className='subHeader' style={{color:`${state.fontPColor}`,textAlign:'left'}}>42.82k Total Sales</h6>
+            <h6 className='subHeader' style={{color:`${state.fontPColor}`,textAlign:'left'}}>{AnalyticsData.totalSales + 'K'} Total Sales</h6>
             <div className="totalOrder row justify-content-between">
               <div className="textWrapper col-auto" style={{paddingRight:"0px"}}>
-                <h3 className='col-12' style={{color:`${state.fontHeaderColor}`,marginBottom:'10px',textAlign:"left",padding:"0px"}}>8258<br></br><h6 className='col-12' style={{color:`${state.fontPColor}`}}>Total Orders</h6></h3>
+                <h3 className='col-12' style={{color:`${state.fontHeaderColor}`,marginBottom:'10px',textAlign:"left",padding:"0px"}}>{AnalyticsData.totalOrder}<br></br><h6 className='col-12' style={{color:`${state.fontPColor}`}}>Total Orders</h6></h3>
               </div>
               
               <div className="chartWeekly col-auto">
                 <div className="textContainer">
-                  <h4 className='' style={{color:`${state.fontHeaderColor}`,marginBottom:'10px',textAlign:"left",padding:"0px"}}>38%<br></br><h6 className='' style={{color:`${state.fontPColor}`}}>Weekly</h6></h4>  
+                  <h4 className='' style={{color:`${state.fontHeaderColor}`,marginBottom:'10px',textAlign:"left",padding:"0px"}}>{AnalyticsData.orderStatisticWeekly + "%"}<br></br><h6 className='' style={{color:`${state.fontPColor}`}}>Weekly</h6></h4>  
                 </div>
                 <ThinPieChart></ThinPieChart>
               </div>
@@ -192,43 +227,43 @@ export default function Analytics({}: Props) {
                     </div>
                    
                   </div>
-                  <div className="number col-auto" style={{color:`${state.fontHeaderColor}`}}>82.5k</div>
+                  <div className="number col-auto" style={{color:`${state.fontHeaderColor}`}}>{AnalyticsData.electronic + "k"}</div>
                 </li>
                 <li className='row justify-content-between'>
 
                   <div className="leftWrapper col-auto">
                   <CheckroomRoundedIcon style={{color:`rgb(113, 221, 55)`,backgroundColor:"rgba(113, 221, 55,0.15)"}} />
                     <div className="textWrapper">
-                      <div className="header"style={{color:`${state.fontHeaderColor}`,marginBottom:'4px',textAlign:"left",padding:"0px"}} >Electronic</div>
-                      <p style={{color:`${state.fontPColor}`}}>Mobile, Earbuds, TV</p>
+                      <div className="header"style={{color:`${state.fontHeaderColor}`,marginBottom:'4px',textAlign:"left",padding:"0px"}} >Fashion</div>
+                      <p style={{color:`${state.fontPColor}`}}>T-shirt,Jeans</p>
                     </div>
                    
                   </div>
-                  <div className="number col-auto" style={{color:`${state.fontHeaderColor}`}}>82.5k</div>
+                  <div className="number col-auto" style={{color:`${state.fontHeaderColor}`}}>{AnalyticsData.fashion + "k"}</div>
                 </li>
                 <li className='row justify-content-between'>
 
                   <div className="leftWrapper col-auto">
                   <HouseOutlinedIcon style={{color:`rgb(3, 195, 236)`,backgroundColor:"rgba(3, 195, 236,0.3)"}} />
                     <div className="textWrapper">
-                      <div className="header"style={{color:`${state.fontHeaderColor}`,marginBottom:'4px',textAlign:"left",padding:"0px"}} >Electronic</div>
-                      <p style={{color:`${state.fontPColor}`}}>Mobile, Earbuds, TV</p>
+                      <div className="header"style={{color:`${state.fontHeaderColor}`,marginBottom:'4px',textAlign:"left",padding:"0px"}} >Decor</div>
+                      <p style={{color:`${state.fontPColor}`}}>Fine Art,Dining</p>
                     </div>
                    
                   </div>
-                  <div className="number col-auto" style={{color:`${state.fontHeaderColor}`}}>82.5k</div>
+                  <div className="number col-auto" style={{color:`${state.fontHeaderColor}`}}>{AnalyticsData.decor + "k"}</div>
                 </li>
                 <li className='row justify-content-between'>
 
                   <div className="leftWrapper col-auto">
                   <SportsSoccerOutlinedIcon style={{color:`rgb(133, 146, 163)`,backgroundColor:"rgba(133, 146, 163,0.3)"}} />
                     <div className="textWrapper">
-                      <div className="header"style={{color:`${state.fontHeaderColor}`,marginBottom:'4px',textAlign:"left",padding:"0px"}} >Electronic</div>
-                      <p style={{color:`${state.fontPColor}`}}>Mobile, Earbuds, TV</p>
+                      <div className="header"style={{color:`${state.fontHeaderColor}`,marginBottom:'4px',textAlign:"left",padding:"0px"}} >Sports</div>
+                      <p style={{color:`${state.fontPColor}`}}>Football,Criket Kit</p>
                     </div>
                    
                   </div>
-                  <div className="number col-auto" style={{color:`${state.fontHeaderColor}`}}>82.5k</div>
+                  <div className="number col-auto" style={{color:`${state.fontHeaderColor}`}}>{AnalyticsData.sports + "k"}</div>
                 </li>
 
               </ul>
@@ -241,8 +276,8 @@ export default function Analytics({}: Props) {
               </div>
               <div className="rightText col-auto">
                   <div className="header"style={{color:`${state.fontPColor}`,marginBottom:'4px',textAlign:"left",padding:"0px"}} >Total Income</div>
-                  <h5 style={{color:`${state.fontHeaderColor}`}}>$459.1k <span className='changingText'><ArrowUpwardIcon/>
-                  42.9%</span></h5>
+                  <h5 style={{color:`${state.fontHeaderColor}`}}>{"$"+ AnalyticsData.totalIncome + "k"} <span className='changingText'><ArrowUpwardIcon/>
+                  {AnalyticsData.incomeDifference + "%"}</span></h5>
               </div>
              </div>
               

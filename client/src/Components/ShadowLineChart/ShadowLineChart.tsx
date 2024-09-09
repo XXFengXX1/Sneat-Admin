@@ -1,11 +1,30 @@
 import React, { useEffect, useRef } from 'react';
 import * as echarts from 'echarts';
+import axios from 'axios';
 
 const ShadowLineChart: React.FC = () => {
   const chartRef = useRef<HTMLDivElement | null>(null);
   const [width,setWidth] = React.useState(window.innerWidth)
 
+  const [chartData,setChartData] = React.useState(null || [])
+  const [clock,setClock] = React.useState(0)
+
+  const chartName = "ShadowLineChart"
+
+
+    const fetchData = async() => {
+      const res =await axios.get(`http://localhost:8800/api/fetch/fetchChartData?chartName=${chartName}`);
+      console.log(res.data.chartData[0].data)
+      setChartData(res.data.chartData[0].data);
+      
+      //set clock reset the data of the chart 
+      setTimeout(()=>{setClock(1)},100)
+    }
+
+    
+
   useEffect(() => {
+    fetchData()
     const chartInstance = echarts.init(chartRef.current!);
 
     const handleResize = () => setWidth(window.innerWidth)
@@ -23,7 +42,7 @@ const ShadowLineChart: React.FC = () => {
       },
       series: [
         {
-          data: [120, 932, 301, 734, 590, 1330, 1320],
+          data: chartData,
           type: 'line',
           smooth: true,
           symbol: 'none',
@@ -44,7 +63,7 @@ const ShadowLineChart: React.FC = () => {
       chartInstance.dispose();
       window.removeEventListener("resize",handleResize)
     };
-  }, [width]);
+  }, [width,clock]);
 
   return <div ref={chartRef} style={{ width: '100%', height: '200px' }} />;
 };

@@ -31,8 +31,6 @@ const PieChartRevenue: React.FC = () => {
             lineStyle: {
               width: 16,
               color:colorA
-
-
             },
           },
           pointer: {

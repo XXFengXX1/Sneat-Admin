@@ -1,14 +1,13 @@
 import express from "express"
 import { login,logout,register } from "../controllers/authController.js"
+import { createDataPage, postData,fetchAnalyticsData } from "../controllers/fetchDataController.js"
 
 const router = express.Router()
 
-router.post("/register",register)
+router.post("/register",postData)
 
-router.post("/login",login)
+router.post("/createData",createDataPage)
 
+router.get("/fetchAnalyticsData",fetchAnalyticsData)
 
- router.post("/logout",logout)
-
-
- export default router
+export default router
