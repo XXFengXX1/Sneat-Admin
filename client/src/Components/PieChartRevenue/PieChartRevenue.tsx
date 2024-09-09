@@ -4,7 +4,8 @@ import { ThemeContext } from '../../ThemeContext/ThemeContext';
 
 const PieChartRevenue: React.FC = () => {
   const chartRef = useRef<HTMLDivElement | null>(null);
-  let  [ArrColor,setArrColor] = React.useState([0.05, 'rgba(105, 108, 255,0.1)'])
+  // let  [ArrColor,setArrColor] = React.useState([0.05, 'rgba(105, 108, 255,0.1)'])
+  let ArrColor = [0.05, 'rgba(105, 108, 255,0.1)']
 
   const {state} = React.useContext(ThemeContext);
   
